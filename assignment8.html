@@ -1,0 +1,29 @@
+Refactor the resume page to use semantic
+ containers instead of plain text blocks.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Siya Gupta - Resume</title>
+<style>
+  body{font-family:'Segoe UI',Arial; max-width:750px; margin:40px auto; padding:0 25px; color:#1a1a1a; line-height:1.6}
+  header{border-bottom:3px solid #0f172a; padding-bottom:18px}
+  h1{margin:0; font-size:38px} .contact{color:#475569; font-size:14px; margin-top:8px}
+  h2{font-size:13px; text-transform:uppercase; letter-spacing:1.8px; border-bottom:2px solid #e2e8f0; padding-bottom:6px; margin-top:28px}
+  .tag{display:inline-block; background:#f1f5f9; border:1px solid #e2e8f0; padding:5px 12px; border-radius:20px; margin:4px; font-size:13px}
+</style>
+</head>
+<body>
+  <header>
+    <h1>SIYA GUPTA</h1>
+    <div class="contact">📍 Aligarh, UP | 📞 7895673750 | ✉️ Guptasiya104@gmail.com</div>
+  </header>
+  <main>
+    <section><h2>Objective</h2><p>Motivated BCA 1st Year student at Invertis University, Aligarh with foundation in Web Development. Seeking an internship to apply my skills in HTML, CSS, and Java.</p></section>
+    <section><h2>Education</h2><ul><li><b>BCA 1st Year</b> - Invertis University, Aligarh (2025-Present)</li></ul></section>
+    <section><h2>Skills</h2><div><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">Java</span><span class="tag">Git & GitHub</span><span class="tag">Responsive Design</span></div></section>
+    <section><h2>Projects</h2><ul><li><b>HTML & CSS Portfolio</b> - 8+ pages including semantic resume</li><li><b>Personal Resume Website</b> - Clean responsive site</li></ul></section>
+  </main>
+  <footer><p style="font-size:12px; color:#888; margin-top:30px;">Declaration: Information is true to best of my knowledge - Siya Gupta</p></footer>
+</body>
+</html>

@@ -1,0 +1,88 @@
+36 Build a simple photo gallery using CSS Grid.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Siya Gupta">
+<title>Assignment 36 - Photo Gallery with CSS Grid - Siya Gupta</title>
+<style>
+*{margin:0; padding:0; box-sizing:border-box;}
+body{font-family:Arial, sans-serif; background:#f8fafc; padding:20px; color:#0f172a;}
+h1{text-align:center;}
+.sub{text-align:center; font-size:12px; color:#64748b; margin-bottom:18px;}
+
+/* CSS GRID GALLERY */
+.gallery{
+  display: grid; /* Requirement */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* responsive columns */
+  gap: 14px;
+  max-width: 1000px;
+  margin: auto;
+}
+.item{
+  background:white;
+  border-radius:12px;
+  overflow:hidden;
+  border:1px solid #e2e8f0;
+  box-shadow:0 4px 12px rgba(0,0,0,0.05);
+  position:relative;
+}
+.item img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  display:block;
+  transition:0.3s;
+}
+.item:hover img{transform:scale(1.05);}
+.item .cap{
+  padding:8px 10px;
+  font-size:12px;
+  display:flex;
+  justify-content:space-between;
+  color:#475569;
+}
+.badge{
+  position:absolute;
+  top:8px;
+  left:8px;
+  background:rgba(15,23,42,0.8);
+  color:white;
+  font-size:10px;
+  padding:3px 8px;
+  border-radius:99px;
+}
+</style>
+</head>
+<body>
+
+<h1>Simple Photo Gallery - CSS Grid</h1>
+<p class="sub">Assignment 36 | Siya Gupta | BCA 1st Year | Invertis University | Using display:grid + auto-fit + minmax() | 7895673750</p>
+
+<div class="gallery">
+<div class="item"><span class="badge">Nature</span><img src="https://picsum.photos/400/300?random=36" alt="Gallery 1"><div class="cap"><span>Image 1</span><span>♥ 234</span></div></div>
+<div class="item"><span class="badge">City</span><img src="https://picsum.photos/400/300?random=37" alt="Gallery 2"><div class="cap"><span>Image 2</span><span>♥ 189</span></div></div>
+<div class="item"><span class="badge">Tech</span><img src="https://picsum.photos/400/300?random=38" alt="Gallery 3"><div class="cap"><span>Image 3</span><span>♥ 321</span></div></div>
+<div class="item"><span class="badge">Travel</span><img src="https://picsum.photos/400/300?random=39" alt="Gallery 4"><div class="cap"><span>Image 4</span><span>♥ 412</span></div></div>
+<div class="item"><span class="badge">BCA Life</span><img src="https://picsum.photos/400/300?random=40" alt="Gallery 5"><div class="cap"><span>Image 5</span><span>♥ 278</span></div></div>
+<div class="item"><span class="badge">Code</span><img src="https://picsum.photos/400/300?random=41" alt="Gallery 6"><div class="cap"><span>Image 6</span><span>♥ 199</span></div></div>
+<div class="item"><span class="badge">Friends</span><img src="https://picsum.photos/400/300?random=42" alt="Gallery 7"><div class="cap"><span>Image 7</span><span>♥ 543</span></div></div>
+<div class="item"><span class="badge">Campus</span><img src="https://picsum.photos/400/300?random=43" alt="Gallery 8"><div class="cap"><span>Image 8</span><span>♥ 123</span></div></div>
+</div>
+
+<div style="max-width:800px; margin:20px auto; background:white; border:1px solid #e2e8f0; border-radius:10px; padding:12px; font-size:12px; font-family:monospace;">
+.gallery{<br>
+&nbsp;&nbsp;display: grid;<br>
+&nbsp;&nbsp;grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));<br>
+&nbsp;&nbsp;gap: 14px;<br>
+}
+</div>
+
+<p style="text-align:center; font-size:11px; color:#94a3b8; margin-top:15px;">© 2026 Siya Gupta | Assignment 36 - Photo Gallery with CSS Grid</p>
+
+</body>
+</html>
+git add assignment36.html
+git commit -m "feat: simple photo gallery using css grid - assignment 36"
+git push

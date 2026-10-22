@@ -1,0 +1,158 @@
+43 Recreate a simple reference landing page using both Grid and Flexbox appropriately.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Siya Gupta">
+<title>Assignment 43 - Grid + Flexbox Landing Page - Siya Gupta</title>
+<style>
+*{margin:0; padding:0; box-sizing:border-box;}
+body{font-family:Arial, sans-serif; background:#f8fafc; color:#0f172a;}
+
+/* GRID = Main Page Structure */
+.page{
+  display:grid;
+  grid-template-rows: 60px auto auto auto 50px;
+  grid-template-areas:
+    "nav"
+    "hero"
+    "features"
+    "products"
+    "footer";
+  min-height:100vh;
+}
+
+/* FLEXBOX = Navbar content */
+.nav{
+  grid-area: nav;
+  background:white;
+  border-bottom:1px solid #e2e8f0;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 6%;
+  position:sticky; top:0; z-index:10;
+}
+.nav-links{display:flex; gap:20px; list-style:none;}
+.nav-links a{text-decoration:none; color:#475569; font-weight:600; font-size:13px;}
+
+/* GRID + FLEX = Hero */
+.hero{
+  grid-area: hero;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  align-items:center;
+  gap:30px;
+  padding:50px 6%;
+  background:linear-gradient(135deg,#eff6ff,#ffffff);
+}
+.hero-text{display:flex; flex-direction:column; gap:12px;}
+.hero-text h1{font-size:40px; line-height:1.1;}
+.hero-text span{color:#2563eb;}
+.hero-btns{display:flex; gap:10px; flex-wrap:wrap;}
+.hero-img{display:flex; justify-content:center;}
+.hero-img img{width:100%; max-width:400px; border-radius:16px; box-shadow:0 20px 40px rgba(0,0,0,0.1);}
+
+/* FLEX = Features row */
+.features{
+  grid-area: features;
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  justify-content:center;
+  padding:30px 6%;
+  background:white;
+}
+.f-card{flex:1 1 200px; max-width:280px; background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:16px; text-align:center;}
+.f-card b{font-size:24px;}
+
+/* GRID = Product grid */
+.products{
+  grid-area: products;
+  padding:30px 6%;
+}
+.product-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap:14px;
+  margin-top:14px;
+}
+.p-card{background:white; border:1px solid #e2e8f0; border-radius:12px; overflow:hidden;}
+.p-card img{width:100%; height:130px; object-fit:cover;}
+.p-card .info{padding:8px; font-size:12px;}
+
+.footer{
+  grid-area: footer;
+  background:#0f172a;
+  color:#94a3b8;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:11px;
+}
+.btn-p{background:#2563eb; color:white; padding:10px 18px; border-radius:8px; text-decoration:none; font-weight:700; font-size:13px;}
+.btn-s{background:white; border:1px solid #e2e8f0; padding:10px 18px; border-radius:8px; text-decoration:none; color:#0f172a; font-weight:700; font-size:13px;}
+
+@media(max-width:700px){
+  .hero{grid-template-columns:1fr; text-align:center;}
+  .hero-btns{justify-content:center;}
+  .nav-links{display:none;}
+  .hero-text h1{font-size:28px;}
+}
+</style>
+</head>
+<body>
+
+<div class="page">
+
+<nav class="nav">
+<b>Siya Gupta</b>
+<ul class="nav-links">
+<li><a href="#">Grid = Layout</a></li>
+<li><a href="#">Flex = Content</a></li>
+</ul>
+<b style="font-size:11px; color:#2563eb;">Assignment 43</b>
+</nav>
+
+<section class="hero">
+<div class="hero-text">
+<p style="font-size:11px; font-weight:700; color:#2563eb; letter-spacing:1px;">GRID + FLEXBOX COMBINED</p>
+<h1>Reference Landing Page using <span>Grid & Flexbox</span></h1>
+<p style="color:#64748b; font-size:14px;">Grid for page structure (rows, columns, areas). Flexbox for alignment inside sections. Best of both worlds - Assignment 43 by Siya Gupta.</p>
+<div class="hero-btns">
+<a href="assignment41.html" class="btn-p">Breakpoints</a>
+<a href="assignment42.html" class="btn-s">Audit Fix</a>
+</div>
+<p style="font-size:11px; color:#94a3b8;">BCA 1st Year | Invertis University Bareilly | 7895673750</p>
+</div>
+<div class="hero-img">
+<img src="https://picsum.photos/600/400?random=111" alt="Hero">
+</div>
+</section>
+
+<div class="features">
+<div class="f-card"><b>🧩</b><br><b style="font-size:13px;">Grid</b><br><p style="font-size:11px; color:#64748b; margin-top:4px;">Used for main page layout, hero 2-col, product auto-fit grid</p></div>
+<div class="f-card"><b>🎯</b><br><b style="font-size:13px;">Flexbox</b><br><p style="font-size:11px; color:#64748b; margin-top:4px;">Used for navbar space-between, buttons, feature cards row</p></div>
+<div class="f-card"><b>📱</b><br><b style="font-size:13px;">Responsive</b><br><p style="font-size:11px; color:#64748b; margin-top:4px;">1 breakpoint 700px - stacks hero, hides nav, responsive grids</p></div>
+</div>
+
+<div class="products">
+<b>Products - GRID (auto-fit)</b>
+<div class="product-grid">
+<div class="p-card"><img src="https://picsum.photos/300/200?random=121"><div class="info">Headphones - ₹1,999</div></div>
+<div class="p-card"><img src="https://picsum.photos/300/200?random=122"><div class="info">Watch - ₹2,499</div></div>
+<div class="p-card"><img src="https://picsum.photos/300/200?random=123"><div class="info">Mouse - ₹799</div></div>
+<div class="p-card"><img src="https://picsum.photos/300/200?random=124"><div class="info">Keyboard - ₹1,299</div></div>
+</div>
+</div>
+
+<div class="footer">© 2026 Siya Gupta | Assignment 43 - Grid for Structure, Flexbox for Alignment | Guptasiya104@gmail.com</div>
+
+</div>
+
+</body>
+</html>
+git add assignment43.html
+git commit -m "feat: reference landing page using both grid and flexbox - assignment 43"
+git push

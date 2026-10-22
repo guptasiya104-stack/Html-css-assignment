@@ -1,0 +1,112 @@
+17 Build a job-application style form using 
+every input type covered.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Job Application Form - Siya Gupta</title>
+<style>
+*{margin:0; padding:0; box-sizing:border-box; font-family:Arial, sans-serif}
+body{background:#f1f5f9; padding:20px; color:#1e293b}
+.container{max-width:750px; margin:auto; background:#fff; padding:28px; border-radius:16px; box-shadow:0 8px 30px rgba(0,0,0,0.08)}
+h1{text-align:center; color:#0f172a}
+p.sub{text-align:center; color:#64748b; font-size:13px; margin:6px 0 18px}
+label{font-weight:700; font-size:13px; margin-top:14px; display:block; color:#334155}
+input, select, textarea{width:100%; padding:10px 12px; border:1px solid #cbd5e1; border-radius:8px; margin-top:5px; font-size:14px}
+input[type="color"]{height:45px; padding:4px}
+input[type="range"]{padding:0}
+.flex{display:flex; gap:12px} .flex>div{flex:1}
+.radio, .check{display:flex; gap:15px; margin-top:5px; font-size:14px} .radio input, .check input{width:auto}
+fieldset{border:1px solid #e2e8f0; border-radius:10px; padding:12px 15px; margin-top:15px}
+legend{font-weight:800; font-size:13px; padding:0 6px; color:#0f172a}
+.btns{display:flex; gap:10px; margin-top:18px}
+button{flex:1; padding:12px; border:none; border-radius:10px; font-weight:800; cursor:pointer}
+.submit{background:#0f172a; color:#fff} .reset{background:#e2e8f0}
+small{color:#94a3b8; font-size:11px}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Job Application Form</h1>
+<p class="sub">Assignment 17 - Build job-application style form using every input type | Siya Gupta - BCA | Guptasiya104@gmail.com | 7895673750</p>
+
+<form>
+
+<fieldset>
+<legend>Personal Details</legend>
+<label>Full Name - text</label>
+<input type="text" name="name" placeholder="Siya Gupta" required>
+
+<div class="flex">
+<div><label>Email - email</label><input type="email" placeholder="Guptasiya104@gmail.com" required></div>
+<div><label>Phone - tel</label><input type="tel" placeholder="7895673750" required></div>
+</div>
+
+<div class="flex">
+<div><label>Password - password</label><input type="password" placeholder="Create password" required></div>
+<div><label>Portfolio URL - url</label><input type="url" placeholder="https://yourportfolio.com"></div>
+</div>
+
+<div class="flex">
+<div><label>DOB - date</label><input type="date"></div>
+<div><label>Birth Month - month</label><input type="month"></div>
+<div><label>Birth Week - week</label><input type="week"></div>
+</div>
+
+<div class="flex">
+<div><label>Interview Time - time</label><input type="time"></div>
+<div><label>Available From - datetime-local</label><input type="datetime-local"></div>
+</div>
+
+<label>Gender - radio</label>
+<div class="radio"><label><input type="radio" name="gender" checked> Female</label><label><input type="radio" name="gender"> Male</label><label><input type="radio" name="gender"> Other</label></div>
+</fieldset>
+
+<fieldset>
+<legend>Job Details</legend>
+
+<label>Job Role - search + datalist</label>
+<input type="search" list="roles" placeholder="Search role - e.g. Frontend">
+<datalist id="roles"><option value="Frontend Developer"><option value="Backend Developer"><option value="UI/UX Designer"><option value="BCA Intern"></datalist>
+
+<label>Experience - number (years)</label>
+<input type="number" min="0" max="10" placeholder="1">
+
+<label>Expected Salary - range</label>
+<input type="range" min="10000" max="100000" step="5000" value="30000" oninput="document.getElementById('sal').innerText=this.value">
+<small>Selected: ₹ <span id="sal">30000</span></small>
+
+<label>Favorite Theme Color - color</label>
+<input type="color" value="#0f172a">
+
+<div class="flex">
+<div><label>Upload Resume - file</label><input type="file" accept=".pdf,.docx"></div>
+<div><label>Upload Photo - file + image</label><input type="file" accept="image/*"></div>
+</div>
+
+<label>Skills - checkbox</label>
+<div class="check"><label><input type="checkbox" checked> HTML</label><label><input type="checkbox"> CSS</label><label><input type="checkbox"> Java</label><label><input type="checkbox"> JavaScript</label></div>
+
+<label>Job Type - select</label>
+<select><option>Full Time</option><option>Part Time</option><option selected>Internship</option><option>Remote</option></select>
+
+<label>Why should we hire you? - textarea</label>
+<textarea rows="3" placeholder="I am Siya Gupta from Aligarh, BCA 1st year student..."></textarea>
+
+<label>Hidden - hidden (for form id)</label>
+<input type="hidden" value="JOB2026_SIYA">
+</fieldset>
+
+<div class="btns">
+<button type="submit" class="submit">Submit Application</button>
+<button type="reset" class="reset">Reset</button>
+</div>
+
+<p style="text-align:center; margin-top:12px; font-size:11px; color:#94a3b8;">All input types covered: text, email, tel, password, url, search, number, date, month, week, time, datetime-local, color, range, file, radio, checkbox, select, textarea, hidden, submit, reset</p>
+
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,145 @@
+41 Add at least two breakpoints to an earlier project and test on multiple 
+screen sizes.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Siya Gupta">
+<title>Assignment 41 - Breakpoints Responsive Test - Siya Gupta</title>
+<style>
+*{margin:0; padding:0; box-sizing:border-box;}
+body{font-family:Arial, sans-serif; background:#f1f5f9; color:#0f172a;}
+
+/* BASE LAYOUT - Desktop First */
+.layout{
+  display:grid;
+  grid-template-columns: 240px 1fr;
+  grid-template-rows: 65px 1fr 45px;
+  grid-template-areas:
+    "header header"
+    "sidebar content"
+    "footer footer";
+  min-height:100vh;
+  gap:15px;
+  padding:15px;
+}
+.header{grid-area:header; background:#0f172a; color:white; border-radius:12px; display:flex; justify-content:space-between; align-items:center; padding:0 20px;}
+.sidebar{grid-area:sidebar; background:white; border:1px solid #e2e8f0; border-radius:12px; padding:16px;}
+.content{grid-area:content; display:grid; gap:15px;}
+.footer{grid-area:footer; background:#0f172a; color:#94a3b8; border-radius:12px; display:flex; justify-content:center; align-items:center; font-size:11px;}
+
+.product-grid{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:12px;
+  background:white;
+  border:1px solid #e2e8f0;
+  border-radius:12px;
+  padding:14px;
+}
+.p-card{border:1px solid #e2e8f0; border-radius:10px; overflow:hidden;}
+.p-card img{width:100%; height:110px; object-fit:cover;}
+.p-card .info{padding:8px; font-size:12px;}
+.breakpoint-label{
+  position:fixed;
+  top:10px;
+  left:50%;
+  transform:translateX(-50%);
+  background:#2563eb;
+  color:white;
+  padding:6px 16px;
+  border-radius:99px;
+  font-size:12px;
+  font-weight:700;
+  z-index:100;
+}
+
+/* BREAKPOINT 1 - TABLET: max-width 900px */
+@media (max-width: 900px){
+  .layout{
+    grid-template-columns: 180px 1fr;
+  }
+  .product-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .breakpoint-label::after{content: " - TABLET VIEW (900px) - 2 columns";}
+}
+
+/* BREAKPOINT 2 - MOBILE: max-width 600px */
+@media (max-width: 600px){
+  .layout{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "content"
+      "footer";
+  }
+  .product-grid{
+    grid-template-columns: 1fr;
+  }
+  .header{flex-direction:column; height:auto; padding:10px; gap:4px; text-align:center;}
+  .breakpoint-label::after{content: " - MOBILE VIEW (600px) - 1 column";}
+}
+
+/* Default label for Desktop */
+@media (min-width: 901px){
+  .breakpoint-label::after{content: " - DESKTOP VIEW (>900px) - 4 columns";}
+}
+</style>
+</head>
+<body>
+
+<div class="breakpoint-label">Current: </div>
+
+<div class="layout">
+<div class="header">
+<b>Siya Gupta | Responsive Test - Assignment 41</b>
+<span style="font-size:11px;">2 Breakpoints: 900px & 600px</span>
+</div>
+
+<div class="sidebar">
+<b>Breakpoints Added</b>
+<p style="font-size:12px; margin-top:8px; line-height:1.6;">
+✅ <b>@media (max-width:900px)</b><br>
+- Sidebar 240px → 180px<br>
+- Products 4 cols → 2 cols<br><br>
+✅ <b>@media (max-width:600px)</b><br>
+- Layout 2 col → 1 col<br>
+- Products 2 cols → 1 col<br>
+- Stacked header<br><br>
+Tested on:<br>
+• Desktop >900px<br>
+• Tablet 600-900px<br>
+• Mobile <600px
+</p>
+<p style="font-size:11px; color:#94a3b8; margin-top:10px;">Siya Gupta<br>Invertis University<br>7895673750</p>
+</div>
+
+<div class="content">
+<div class="product-grid">
+<div class="p-card"><img src="https://picsum.photos/300/200?random=91"><div class="info">Product 1 - ₹1,999</div></div>
+<div class="p-card"><img src="https://picsum.photos/300/200?random=92"><div class="info">Product 2 - ₹2,499</div></div>
+<div class="p-card"><img src="https://picsum.photos/300/200?random=93"><div class="info">Product 3 - ₹799</div></div>
+<div class="p-card"><img src="https://picsum.photos/300/200?random=94"><div class="info">Product 4 - ₹1,299</div></div>
+<div class="p-card"><img src="https://picsum.photos/300/200?random=95"><div class="info">Product 5 - ₹999</div></div>
+<div class="p-card"><img src="https://picsum.photos/300/200?random=96"><div class="info">Product 6 - ₹1,199</div></div>
+<div class="p-card"><img src="https://picsum.photos/300/200?random=97"><div class="info">Product 7 - ₹499</div></div>
+<div class="p-card"><img src="https://picsum.photos/300/200?random=98"><div class="info">Product 8 - ₹3,299</div></div>
+</div>
+<div style="background:white; border:1px solid #e2e8f0; border-radius:12px; padding:12px; font-size:12px; font-family:monospace;">
+/* Breakpoint 1 */ @media(max-width:900px){...}<br>
+/* Breakpoint 2 */ @media(max-width:600px){...}
+</div>
+</div>
+
+<div class="footer">© 2026 Siya Gupta | Assignment 41 - 2 Breakpoints Responsive Test | Resize window to test | Guptasiya104@gmail.com</div>
+
+</div>
+
+</body>
+</html>
+git add assignment41.html
+git commit -m "feat: add two breakpoints responsive test - assignment 41"
+git push

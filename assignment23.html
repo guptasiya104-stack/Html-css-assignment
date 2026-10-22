@@ -1,0 +1,132 @@
+23 Restyle the resume page with a proper font pairing and
+ colour palette.
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Siya Gupta">
+<title>Assignment 23 - Resume with Font Pairing & Colour Palette - Siya Gupta</title>
+
+<!-- Proper Font Pairing: Poppins (Heading) + Inter (Body) -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  /* Professional Colour Palette */
+  --primary: #0f172a; /* Slate 900 - Header */
+  --accent: #2563eb; /* Blue 600 - Links & Highlights */
+  --bg: #f8fafc; /* Slate 50 - Background */
+  --card: #ffffff; /* White */
+  --text: #334155; /* Slate 700 - Body Text */
+  --muted: #64748b; /* Slate 500 - Subtext */
+}
+* {margin:0; padding:0; box-sizing:border-box;}
+body{
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  padding: 20px;
+}
+.container{
+  max-width: 750px;
+  margin: auto;
+  background: var(--card);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(15,23,42,0.08);
+  border: 1px solid #e2e8f0;
+}
+header{
+  background: var(--primary);
+  color: white;
+  padding: 30px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+header img{
+  width: 80px; height: 80px; border-radius: 50%;
+  border: 3px solid rgba(255,255,255,0.3);
+}
+h1, h2, h3{
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -0.5px;
+}
+h1{font-size: 28px; margin-bottom: 2px;}
+header p{color: #94a3b8; font-size: 13px;}
+header a{color: #93c5fd; text-decoration: none;}
+.content{padding: 25px;}
+h2{
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--accent);
+  border-bottom: 2px solid #eff6ff;
+  padding-bottom: 6px;
+  margin: 18px 0 10px;
+}
+.tag{
+  background: #eff6ff;
+  color: var(--accent);
+  border: 1px solid #dbeafe;
+  padding: 5px 12px;
+  border-radius: 99px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+  margin: 3px;
+  font-family: 'Poppins', sans-serif;
+}
+a{color: var(--accent);}
+ul{margin-left: 18px;}
+li{margin-bottom: 4px;}
+</style>
+</head>
+<body>
+
+<div class="container">
+<header>
+<img src="https://i.pravatar.cc/150?img=5" alt="Siya Gupta Resume Photo">
+<div>
+<h1>Siya Gupta</h1>
+<p>BCA 1st Year | Invertis University, Bareilly | Aligarh, UP</p>
+<p>📞 7895673750 | ✉️ Guptasiya104@gmail.com | <a href="#">Portfolio</a></p>
+</div>
+</header>
+
+<div class="content">
+<h2>Professional Summary</h2>
+<p>Motivated BCA student from Aligarh, passionate about Web Development. I have learned HTML, CSS, and Java. My goal is to become a Full Stack Developer. This resume is restyled for Assignment 23 with proper font pairing and colour palette.</p>
+
+<h2>Education</h2>
+<ul>
+<li><b>BCA 1st Year</b> - Invertis University, Bareilly (2025-2028) - CGPA: 8.2</li>
+<li><b>12th Standard</b> - Aligarh, UP - 85%</li>
+</ul>
+
+<h2>Skills</h2>
+<span class="tag">HTML5</span>
+<span class="tag">CSS3 (Font & Palette)</span>
+<span class="tag">Java</span>
+<span class="tag">Git & GitHub</span>
+<span class="tag">Responsive Design</span>
+
+<h2>Colour Palette Used</h2>
+<p style="font-size:13px;">
+<span style="display:inline-block; width:12px; height:12px; background:#0f172a; border-radius:50%;"></span> #0f172a Primary (Header) &nbsp;
+<span style="display:inline-block; width:12px; height:12px; background:#2563eb; border-radius:50%;"></span> #2563eb Accent (Links) &nbsp;
+<span style="display:inline-block; width:12px; height:12px; background:#f8fafc; border-radius:50%; border:1px solid #ccc;"></span> #f8fafc Background
+</p>
+
+<h2>Font Pairing Used</h2>
+<p style="font-size:13px;"><b>Heading:</b> Poppins (600, 700) - Modern, Bold, Professional<br>
+<b>Body:</b> Inter (400, 500) - Clean, Readable, Soft</p>
+
+<p style="text-align:center; font-size:11px; color:var(--muted); margin-top:20px;">© 2026 Siya Gupta | Assignment 23 - Resume Restyled with Proper Font Pairing & Colour Palette | 7895673750</p>
+</div>
+</div>
+
+</body>
+</html>

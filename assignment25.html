@@ -1,0 +1,106 @@
+25 Submit the styled multi-page project with a short note on
+ design choices.
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Siya Gupta">
+<title>Assignment 25 - Final Styled Multi-Page Project - Siya Gupta</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --primary:#0f172a;
+ --accent:#2563eb;
+ --accent-light:#dbeafe;
+ --bg:#f8fafc;
+ --surface:#ffffff;
+ --text:#334155;
+ --text-light:#64748b;
+ --border:#e2e8f0;
+ --text-sm:13px;
+ --text-base:15px;
+ --text-lg:18px;
+ --text-2xl:28px;
+ --space-md:16px;
+ --space-lg:24px;
+ --radius-md:12px;
+}
+*{margin:0; padding:0; box-sizing:border-box;}
+body{font-family:'Inter', sans-serif; background:var(--bg); color:var(--text); font-size:var(--text-base); line-height:1.6;}
+nav{background:var(--primary); padding:15px; text-align:center; position:sticky; top:0;}
+nav a{color:#93c5fd; margin:0 12px; text-decoration:none; font-weight:700; font-family:'Poppins', sans-serif;}
+nav a.active{color:#fff; border-bottom:2px solid #fff; padding-bottom:3px;}
+.hero{background:linear-gradient(135deg, var(--primary), #1e40af); color:white; text-align:center; padding:40px 20px;}
+.hero h1{font-family:'Poppins', sans-serif; font-size:var(--text-2xl);}
+.container{max-width:800px; margin:20px auto; padding:0 15px;}
+.card{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-md); padding:20px; margin-bottom:16px;}
+h2{font-family:'Poppins', sans-serif; font-size:var(--text-lg); color:var(--primary); margin-bottom:8px;}
+.badge{background:var(--accent-light); color:var(--accent); padding:4px 10px; border-radius:99px; font-size:var(--text-sm); font-weight:700; display:inline-block; margin:3px;}
+.grid{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:10px;}
+@media(max-width:600px){.grid{grid-template-columns:1fr;}}
+.link-card{display:block; text-decoration:none; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-md); padding:15px; transition:0.2s;}
+.link-card:hover{border-color:var(--accent); transform:translateY(-2px);}
+.small{font-size:12px; color:var(--text-light); text-align:center; margin-top:20px;}
+</style>
+</head>
+<body>
+
+<nav>
+<a href="assignment20.html">Home</a>
+<a href="about.html">About</a>
+<a href="registration.html">Registration</a>
+<a href="contact.html">Contact</a>
+<a href="assignment25.html" class="active">Final</a>
+</nav>
+
+<div class="hero">
+<h1>Siya Gupta - Final Project</h1>
+<p>Styled Multi-Page Project | Assignment 20 to 25 Complete</p>
+<p style="color:#cbd5e1; font-size:13px;">BCA 1st Year | Invertis University | Aligarh | 7895673750</p>
+</div>
+
+<div class="container">
+
+<div class="card" style="border-left:4px solid var(--accent);">
+<h2>📁 Project Links - My Multi-Page Project</h2>
+<div class="grid">
+<a class="link-card" href="assignment20.html"><b>Home / Index</b><br><span style="font-size:13px; color:#64748b;">Main landing page - Assignment 20</span></a>
+<a class="link-card" href="about.html"><b>About Page</b><br><span style="font-size:13px; color:#64748b;">My college & course info</span></a>
+<a class="link-card" href="registration.html"><b>Registration Page</b><br><span style="font-size:13px; color:#64748b;">Student form with validation</span></a>
+<a class="link-card" href="contact.html"><b>Contact Page</b><br><span style="font-size:13px; color:#64748b;">Contact form + info</span></a>
+</div>
+</div>
+
+<div class="card">
+<h2>🎨 Short Note on Design Choices</h2>
+<p><b>1. Font Pairing:</b> I used <b>Poppins (700, 600)</b> for all headings - it looks bold and professional. For body text, I used <b>Inter (400, 500)</b> because it is very clean and easy to read on mobile. This is a popular pairing used by many professional websites.</p>
+<p style="margin-top:10px;"><b>2. Colour Palette:</b> I chose a professional palette: 
+<span class="badge">Primary #0f172a (Slate - Header)</span> 
+<span class="badge">Accent #2563eb (Blue - Links)</span> 
+<span class="badge">Background #f8fafc (Light Grey)</span> 
+<span class="badge">Surface #ffffff</span> 
+This palette has good contrast and is not too bright.</p>
+<p style="margin-top:10px;"><b>3. Design Tokens (Assignment 24):</b> I created CSS variables in :root like --color-primary, --text-lg, --space-lg. This makes it easy to change design in one place and keeps consistency across all 4 pages.</p>
+<p style="margin-top:10px;"><b>4. Layout:</b> Used simple cards with 12px radius, 1px border, soft shadow. Sticky navigation for easy switching. Mobile responsive with grid that becomes 1 column on small screens.</p>
+<p style="margin-top:10px;"><b>5. Consistency:</b> All pages (Home, About, Registration, Contact) use same nav, same colours, same fonts, same card style - so user feels it's one website, not 4 different pages.</p>
+</div>
+
+<div class="card">
+<h2>✅ What I Did From Assignment 20 to 25</h2>
+<ul style="margin-left:18px;">
+<li><b>20:</b> Created multi-page HTML project (Home, About, Registration, Contact)</li>
+<li><b>21:</b> Converted HTML-only page to lightly styled page</li>
+<li><b>22:</b> Used 6 selector types: Element, ID, Class, Attribute, Pseudo-class, Descendant</li>
+<li><b>23:</b> Restyled resume with Poppins+Inter font pairing and professional colour palette</li>
+<li><b>24:</b> Created design-token stylesheet using CSS variables</li>
+<li><b>25:</b> Submitted final styled multi-page project with design note (This Page)</li>
+</ul>
+</div>
+
+<p class="small">© 2026 Siya Gupta | Guptasiya104@gmail.com | 7895673750 | BCA 1st Year | Final Submission Assignment 25 | All assignments complete</p>
+
+</div>
+
+</body>
+</html>

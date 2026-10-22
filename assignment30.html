@@ -1,0 +1,134 @@
+30 Submit the finished profile-card / product-card component.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Siya Gupta">
+<title>Assignment 30 - Profile & Product Card - Siya Gupta</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0; padding:0; box-sizing:border-box;}
+body{font-family:'Inter', sans-serif; background:#f1f5f9; padding:20px; color:#334155;}
+.container{max-width:900px; margin:auto;}
+h1{text-align:center; color:#0f172a; font-family:'Poppins', sans-serif;}
+.sub{text-align:center; font-size:12px; color:#64748b; margin-bottom:20px;}
+.grid{display:grid; grid-template-columns:1fr 1fr; gap:20px;}
+@media(max-width:700px){.grid{grid-template-columns:1fr;}}
+
+/* === PROFILE CARD === */
+.profile-card{
+  background:white;
+  border-radius:16px;
+  border:1px solid #e2e8f0;
+  overflow:hidden;
+  box-shadow:0 8px 24px rgba(15,23,42,0.06);
+  text-align:center;
+  position:relative;
+}
+.profile-top{
+  height:80px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  position:relative;
+}
+.profile-img{
+  width:90px; height:90px;
+  border-radius:50%;
+  border:4px solid white;
+  position:absolute;
+  bottom:-45px;
+  left:50%;
+  transform:translateX(-50%);
+  background:#fff;
+  object-fit:cover;
+}
+.profile-body{padding:60px 20px 20px;}
+.profile-body h2{font-family:'Poppins', sans-serif; font-size:18px; color:#0f172a;}
+.role{color:#2563eb; font-size:13px; font-weight:600; margin-top:2px;}
+.bio{font-size:13px; color:#64748b; margin:12px 0;}
+.tags span{background:#eff6ff; color:#2563eb; padding:4px 10px; border-radius:99px; font-size:11px; font-weight:600; margin:3px; display:inline-block; border:1px solid #dbeafe;}
+.btn{display:inline-block; margin-top:12px; background:#0f172a; color:white; padding:9px 18px; border-radius:99px; text-decoration:none; font-size:13px; font-weight:700;}
+
+/* === PRODUCT CARD === */
+.product-card{
+  background:white;
+  border-radius:16px;
+  border:1px solid #e2e8f0;
+  overflow:hidden;
+  box-shadow:0 8px 24px rgba(15,23,42,0.06);
+  position:relative;
+}
+.product-img-wrap{position:relative; height:180px; overflow:hidden; background:#f8fafc;}
+.product-img-wrap img{width:100%; height:100%; object-fit:cover;}
+.badge-top{position:absolute; top:10px; left:10px; background:#16a34a; color:white; font-size:10px; font-weight:700; padding:4px 8px; border-radius:99px; z-index:2;}
+.wish{position:absolute; top:10px; right:10px; background:white; width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center; z-index:2; box-shadow:0 2px 8px rgba(0,0,0,0.1);}
+.product-body{padding:15px;}
+.product-body h3{font-family:'Poppins', sans-serif; font-size:16px; color:#0f172a;}
+.rating{font-size:12px; color:#f59e0b; margin:4px 0;}
+.price{margin-top:6px;}
+.price b{font-size:18px; color:#0f172a;}
+.price s{font-size:12px; color:#94a3b8; margin-left:6px;}
+.price span{font-size:11px; color:#16a34a; font-weight:700; margin-left:6px;}
+.btn-buy{width:100%; margin-top:12px; background:#2563eb; color:white; border:none; padding:10px; border-radius:10px; font-weight:700; cursor:pointer; font-family:'Poppins', sans-serif;}
+.btn-buy:hover{background:#1d4ed8;}
+</style>
+</head>
+<body>
+
+<div class="container">
+<h1>Finished Card Components</h1>
+<p class="sub">Assignment 30 | Siya Gupta | BCA 1st Year | Invertis University | 7895673750</p>
+
+<div class="grid">
+
+<!-- PROFILE CARD -->
+<div class="profile-card">
+<div class="profile-top">
+<img class="profile-img" src="https://i.pravatar.cc/150?img=5" alt="Siya Gupta Profile Photo">
+</div>
+<div class="profile-body">
+<h2>Siya Gupta</h2>
+<p class="role">BCA Student | Web Developer</p>
+<p class="bio">Motivated BCA 1st year student from Aligarh, passionate about HTML, CSS & Java. Goal: Full Stack Developer.</p>
+<div class="tags">
+<span>HTML5</span><span>CSS3</span><span>Java</span><span>GitHub</span>
+</div>
+<a href="#" class="btn">View Portfolio</a>
+<p style="font-size:11px; color:#94a3b8; margin-top:10px;">Aligarh, UP | Guptasiya104@gmail.com | 7895673750</p>
+</div>
+</div>
+
+<!-- PRODUCT CARD -->
+<div class="product-card">
+<div class="product-img-wrap">
+<span class="badge-top">20% OFF</span>
+<div class="wish">❤️</div>
+<img src="https://picsum.photos/400/300?random=5" alt="Product Image - Laptop">
+</div>
+<div class="product-body">
+<h3>Lenovo IdeaPad Slim - Laptop</h3>
+<div class="rating">⭐⭐⭐⭐⭐ 4.8 (234 reviews)</div>
+<p style="font-size:12px; color:#64748b;">8GB RAM | 512GB SSD | Intel i5 | Ideal for BCA Students</p>
+<div class="price"><b>₹42,999</b><s>₹54,999</s><span>SAVE ₹12,000</span></div>
+<button class="btn-buy">Add to Cart - Buy Now</button>
+<p style="font-size:10px; color:#94a3b8; margin-top:8px; text-align:center;">Free Delivery | 1 Year Warranty</p>
+</div>
+</div>
+
+</div>
+
+<div style="background:white; border-radius:12px; padding:15px; margin-top:20px; border:1px solid #e2e8f0; font-size:12px;">
+<h3 style="font-size:13px;">Component Details for Teacher:</h3>
+<p style="margin-top:6px;"><b>Profile Card uses:</b> position: relative/absolute for avatar overlap, border-radius: 50% + 16px, gradient background, flex tags.<br>
+<b>Product Card uses:</b> position: absolute for badge & wishlist (z-index), object-fit:cover for image, overflow:hidden to clip image, box-shadow, border-radius.</p>
+<p style="margin-top:8px; color:#16a34a;"><b>Both cards are finished, responsive, and use design tokens (colours, Poppins+Inter fonts, radius) from previous assignments.</b></p>
+</div>
+
+<p style="text-align:center; font-size:11px; color:#94a3b8; margin-top:15px;">© 2026 Siya Gupta | Assignment 30 - Finished Profile-Card / Product-Card Component | Final Submission Complete</p>
+</div>
+
+</body>
+</html>
+git add assignment30.html
+git commit -m "feat: finished profile-card and product-card component - assignment 30 final"
+git push

@@ -1,0 +1,189 @@
+40 Submit the finished Grid-based project.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Siya Gupta">
+<title>Assignment 40 - Finished Grid Project - Siya Gupta</title>
+<style>
+*{margin:0; padding:0; box-sizing:border-box;}
+body{font-family:Arial, sans-serif; background:#f1f5f9; color:#0f172a;}
+
+.main-layout{
+  display:grid;
+  grid-template-columns: 240px 1fr;
+  grid-template-rows: 65px 1fr 45px;
+  grid-template-areas:
+    "header header"
+    "sidebar content"
+    "footer footer";
+  min-height:100vh;
+  gap:15px;
+  padding:15px;
+}
+
+/* HEADER - GRID + FLEX */
+.header{
+  grid-area: header;
+  background:#0f172a;
+  color:white;
+  border-radius:12px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 20px;
+}
+
+/* SIDEBAR */
+.sidebar{
+  grid-area: sidebar;
+  background:white;
+  border:1px solid #e2e8f0;
+  border-radius:12px;
+  padding:16px;
+}
+.sidebar h3{font-size:14px; margin-bottom:10px;}
+.sidebar a{display:block; padding:9px 10px; text-decoration:none; color:#475569; font-size:13px; border-radius:8px; margin:3px 0;}
+.sidebar a:hover, .sidebar a.active{background:#eff6ff; color:#2563eb; font-weight:700;}
+
+/* CONTENT AREA - NESTED GRIDS */
+.content{
+  grid-area: content;
+  display:grid;
+  gap:15px;
+  grid-template-rows: auto auto auto;
+}
+
+/* 1. Photo Gallery Grid - Assignment 36 */
+.gallery-section{
+  background:white;
+  border:1px solid #e2e8f0;
+  border-radius:12px;
+  padding:14px;
+}
+.gallery{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap:10px;
+  margin-top:10px;
+}
+.gallery img{width:100%; height:100px; object-fit:cover; border-radius:8px;}
+
+/* 2. Product Grid Auto Reflow - Assignment 37 & 39 */
+.products-section{
+  background:white;
+  border:1px solid #e2e8f0;
+  border-radius:12px;
+  padding:14px;
+}
+.product-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap:12px;
+  margin-top:10px;
+}
+.p-card{border:1px solid #e2e8f0; border-radius:10px; overflow:hidden; background:#f8fafc;}
+.p-card img{width:100%; height:110px; object-fit:cover;}
+.p-card .info{padding:8px; font-size:12px;}
+.price{color:#2563eb; font-weight:700;}
+
+/* 3. Dashboard Stats - Assignment 38 */
+.stats-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap:12px;
+}
+.stat{background:white; border:1px solid #e2e8f0; border-radius:12px; padding:14px; text-align:center;}
+.stat b{font-size:20px; color:#2563eb;}
+
+.footer{
+  grid-area: footer;
+  background:#0f172a;
+  color:#94a3b8;
+  border-radius:12px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:11px;
+  text-align:center;
+  padding:0 10px;
+}
+
+@media(max-width:800px){
+  .main-layout{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "content"
+      "footer";
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="main-layout">
+
+<div class="header">
+<b>✅ Finished Grid Project - Assignment 36 to 40</b>
+<span style="font-size:11px;">Siya Gupta | BCA 1st Year | Invertis University | 7895673750</span>
+</div>
+
+<div class="sidebar">
+<h3>Grid Module</h3>
+<a href="assignment36.html">36 - Photo Gallery (Grid)</a>
+<a href="assignment37.html">37 - Product Grid Reflow</a>
+<a href="assignment38.html">38 - Dashboard Named Areas</a>
+<a href="assignment39.html">39 - Grid + Header + Sidebar</a>
+<a class="active" href="#">40 - Finished Project ✅</a>
+<p style="font-size:11px; color:#64748b; margin-top:15px;">All Concepts Used:<br>
+• display:grid<br>
+• auto-fit + minmax()<br>
+• grid-template-areas<br>
+• nested grids<br>
+• auto reflow<br>
+Guptasiya104@gmail.com<br>Aligarh / Bareilly</p>
+</div>
+
+<div class="content">
+
+<!-- STATS - Dashboard layout -->
+<div class="stats-grid">
+<div class="stat"><p style="font-size:11px;">Total Projects</p><b>40</b><p style="font-size:11px; color:#64748b;">Completed</p></div>
+<div class="stat"><p style="font-size:11px;">Grid Concepts</p><b>5+</b><p style="font-size:11px; color:#64748b;">Used</p></div>
+<div class="stat"><p style="font-size:11px;">Responsive</p><b>100%</b><p style="font-size:11px; color:#64748b;">Auto Reflow</p></div>
+</div>
+
+<!-- GALLERY - Assignment 36 -->
+<div class="gallery-section">
+<b>Photo Gallery - display:grid + auto-fit (Assignment 36)</b>
+<div class="gallery">
+<img src="https://picsum.photos/200/150?random=71"><img src="https://picsum.photos/200/150?random=72"><img src="https://picsum.photos/200/150?random=73"><img src="https://picsum.photos/200/150?random=74"><img src="https://picsum.photos/200/150?random=75"><img src="https://picsum.photos/200/150?random=76">
+</div>
+</div>
+
+<!-- PRODUCTS - Assignment 37,39 -->
+<div class="products-section">
+<b>Responsive Product Grid with Header & Sidebar - Assignment 37, 39, 40</b>
+<p style="font-size:11px; color:#64748b; margin-top:3px;">grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)) - auto reflows without media queries</p>
+<div class="product-grid">
+<div class="p-card"><img src="https://picsum.photos/300/200?random=81"><div class="info">Headphones<div class="price">₹1,999</div></div></div>
+<div class="p-card"><img src="https://picsum.photos/300/200?random=82"><div class="info">Smart Watch<div class="price">₹2,499</div></div></div>
+<div class="p-card"><img src="https://picsum.photos/300/200?random=83"><div class="info">Mouse<div class="price">₹799</div></div></div>
+<div class="p-card"><img src="https://picsum.photos/300/200?random=84"><div class="info">Keyboard<div class="price">₹1,299</div></div></div>
+</div>
+</div>
+
+</div>
+
+<div class="footer">© 2026 Siya Gupta | Assignment 40 - Finished Grid-Based Project (36-40 Complete) | All Grid Concepts: display:grid, grid-template-areas, auto-fit, minmax(), nested grids | Invertis University Bareilly</div>
+
+</div>
+
+</body>
+</html>
+git add assignment40.html
+git commit -m "feat: finished grid-based project - assignment 40 final - all grid module complete 36-40"
+git push

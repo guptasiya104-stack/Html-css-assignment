@@ -1,0 +1,110 @@
+Q16- Create a student-registration form using basic input types16 Create a student-registration form using
+ basic input types
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Registration Form - Siya Gupta</title>
+<style>
+*{margin:0; padding:0; box-sizing:border-box; font-family:Arial, sans-serif}
+body{background:#f1f5f9; padding:20px}
+.container{max-width:600px; margin:20px auto; background:#fff; padding:25px; border-radius:14px; box-shadow:0 4px 20px rgba(0,0,0,0.08)}
+h1{text-align:center; color:#0f172a; font-size:22px}
+p.sub{text-align:center; color:#64748b; font-size:13px; margin:5px 0 15px}
+label{display:block; font-weight:600; margin-top:12px; font-size:14px; color:#334155}
+input, select, textarea{width:100%; padding:10px 12px; border:1px solid #cbd5e1; border-radius:8px; margin-top:5px; font-size:14px}
+input:focus, select:focus, textarea:focus{outline:none; border-color:#3b82f6}
+.row{display:flex; gap:10px}
+.row div{flex:1}
+.radio-group, .check-group{display:flex; gap:15px; margin-top:5px; font-size:14px}
+.radio-group input, .check-group input{width:auto}
+.btns{display:flex; gap:10px; margin-top:18px}
+button{flex:1; padding:11px; border:none; border-radius:8px; font-weight:700; cursor:pointer}
+.btn-submit{background:#0f172a; color:#fff}
+.btn-reset{background:#e2e8f0; color:#334155}
+</style>
+</head>
+<body>
+
+<div class="container">
+<h1>Student Registration Form</h1>
+<p class="sub">Assignment 16 | Siya Gupta - BCA 1st Year | Invertis University</p>
+
+<form>
+
+<label>Full Name</label>
+<input type="text" name="fullname" placeholder="Siya Gupta" required>
+
+<div class="row">
+<div>
+<label>Email</label>
+<input type="email" name="email" placeholder="Guptasiya104@gmail.com" required>
+</div>
+<div>
+<label>Phone</label>
+<input type="tel" name="phone" placeholder="7895673750" pattern="[0-9]{10}" required>
+</div>
+</div>
+
+<div class="row">
+<div>
+<label>Date of Birth</label>
+<input type="date" name="dob" required>
+</div>
+<div>
+<label>Age</label>
+<input type="number" name="age" min="16" max="30" placeholder="18">
+</div>
+</div>
+
+<label>Gender (Radio)</label>
+<div class="radio-group">
+<label><input type="radio" name="gender" value="female" checked> Female</label>
+<label><input type="radio" name="gender" value="male"> Male</label>
+<label><input type="radio" name="gender" value="other"> Other</label>
+</div>
+
+<label>Course (Select)</label>
+<select name="course" required>
+<option value="">-- Select Course --</option>
+<option value="BCA" selected>BCA</option>
+<option value="BBA">BBA</option>
+<option value="BTech">B.Tech</option>
+<option value="MCA">MCA</option>
+</select>
+
+<label>Year / Semester</label>
+<select name="year">
+<option>BCA 1st Year</option>
+<option>BCA 2nd Year</option>
+<option>BCA 3rd Year</option>
+</select>
+
+<label>Address</label>
+<textarea name="address" rows="3" placeholder="Your address - Aligarh, UP"></textarea>
+
+<label>Skills (Checkbox)</label>
+<div class="check-group">
+<label><input type="checkbox" name="skill" value="html" checked> HTML</label>
+<label><input type="checkbox" name="skill" value="css"> CSS</label>
+<label><input type="checkbox" name="skill" value="java"> Java</label>
+</div>
+
+<label>Upload Photo (File input)</label>
+<input type="file" name="photo" accept="image/*">
+
+<label>Create Password (Password input)</label>
+<input type="password" name="password" placeholder="Min 6 characters" minlength="6">
+
+<div class="btns">
+<button type="submit" class="btn-submit">Register Now</button>
+<button type="reset" class="btn-reset">Reset</button>
+</div>
+
+</form>
+<p style="text-align:center; font-size:12px; color:#94a3b8; margin-top:15px;">© 2026 Siya Gupta | Q16 - basic input types: text, email, tel, date, number, radio, checkbox, file, password, select, textarea</p>
+</div>
+
+</body>
+</html>

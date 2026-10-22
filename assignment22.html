@@ -1,0 +1,105 @@
+22 Style a page using at least four different selector
+ types correctly.
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Siya Gupta">
+<title>Assignment 22 - Four Selector Types - Siya Gupta</title>
+<style>
+/* 1. ELEMENT SELECTOR - selects all h2 */
+h2{
+  color: #0f172a;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 5px;
+}
+
+/* 2. ID SELECTOR - selects only #main-header */
+#main-header{
+  background: #0f172a;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+}
+
+/* 3. CLASS SELECTOR - selects all .card */
+.card{
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 12px 0;
+}
+
+/* 4. ATTRIBUTE SELECTOR - selects input with type="email" */
+input[type="email"]{
+  border: 2px solid #3b82f6;
+  background: #eff6ff;
+}
+
+/* 5. PSEUDO-CLASS SELECTOR - hover effect */
+a:hover{
+  color: #dc2626;
+  text-decoration: underline;
+}
+
+/* 6. DESCENDANT SELECTOR - ul inside .card */
+.card ul{
+  background: #f8fafc;
+  padding: 10px 10px 10px 25px;
+  border-radius: 8px;
+}
+
+</style>
+</head>
+<body>
+
+<header id="main-header">
+<h1 style="margin:0; color:white; border:none;">Siya Gupta - Selector Demo</h1>
+<p>BCA 1st Year | Invertis University | Assignment 22</p>
+</header>
+
+<div class="card">
+<h2>1. Element Selector - h2</h2>
+<p>This h2 is styled using element selector <b>h2{ }</b></p>
+</div>
+
+<div class="card">
+<h2>2. ID Selector - #main-header</h2>
+<p>Top header is styled using ID selector <b>#main-header{ }</b> - ID is unique</p>
+</div>
+
+<div class="card">
+<h2>3. Class Selector - .card</h2>
+<p>All these boxes are styled using class selector <b>.card{ }</b></p>
+<ul>
+<li>Same class can be used many times</li>
+<li>Reusable styling</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>4. Attribute Selector - input[type="email"]</h2>
+<p>Check the difference:</p>
+<input type="text" placeholder="Normal text input - no special border" style="width:100%; padding:8px; margin-top:5px;">
+<input type="email" placeholder="Email input - blue border from attribute selector" style="width:100%; padding:8px; margin-top:8px; border-radius:6px;">
+</div>
+
+<div class="card">
+<h2>5. Pseudo-class Selector - a:hover</h2>
+<p>Hover on this link: <a href="#" style="font-weight:bold;">Hover Me - I turn red</a> - styled using <b>a:hover{ }</b></p>
+</div>
+
+<div class="card">
+<h2>6. Descendant Selector - .card ul</h2>
+<p>This UL inside card has grey background due to <b>.card ul{ }</b></p>
+</div>
+
+<p style="text-align:center; font-size:12px; color:#94a3b8; margin-top:20px;">
+© 2026 Siya Gupta | Assignment 22 | 6 Selector Types Used: Element, ID, Class, Attribute, Pseudo-class, Descendant | Phone: 7895673750
+</p>
+
+</body>
+</html>

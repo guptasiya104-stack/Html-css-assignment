@@ -1,0 +1,114 @@
+Q18- Build an e-commerce-style product size-chart
+ table.
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Size Chart - Siya Gupta</title>
+<style>
+*{margin:0; padding:0; box-sizing:border-box; font-family:Arial, sans-serif}
+body{background:#f8fafc; padding:20px; color:#1e293b}
+.container{max-width:850px; margin:auto; background:#fff; padding:25px; border-radius:16px; box-shadow:0 8px 30px rgba(0,0,0,0.07)}
+h1{text-align:center; color:#0f172a; font-size:22px}
+p.sub{text-align:center; color:#64748b; font-size:13px; margin:5px 0 18px}
+.product{display:flex; gap:15px; align-items:center; background:#f8fafc; padding:12px; border-radius:12px; margin-bottom:15px; border:1px solid #e2e8f0}
+.product img{width:90px; height:90px; object-fit:cover; border-radius:10px}
+.badge{background:#0f172a; color:#fff; font-size:11px; padding:3px 8px; border-radius:20px; display:inline-block; margin-top:4px}
+table{width:100%; border-collapse:collapse; margin-top:12px; font-size:14px}
+th{background:#0f172a; color:#fff; padding:12px 8px; text-align:left; font-size:13px}
+th:first-child{border-radius:10px 0 0 0} th:last-child{border-radius:0 10px 0 0}
+td{padding:11px 8px; border-bottom:1px solid #e2e8f0}
+tr:nth-child(even){background:#f8fafc}
+tr:hover{background:#eff6ff}
+.highlight{background:#dcfce7 !important; font-weight:700}
+.note{background:#fffbeb; border:1px solid #fde68a; padding:10px; border-radius:8px; font-size:12px; margin-top:12px}
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>Product Size Chart - E-commerce Style</h1>
+<p class="sub">Assignment 18 | Siya Gupta - BCA | Invertis University | Guptasiya104@gmail.com</p>
+
+<div class="product">
+<img src="https://via.placeholder.com/200x200/0f172a/fff?text=T-SHIRT" alt="Women's Cotton T-shirt Product Image">
+<div>
+<h3>Women's Premium Cotton T-Shirt</h3>
+<p style="font-size:13px; color:#64748b;">Brand: Siya Fashion | Material: 100% Cotton | Fit: Regular | Model wearing Size M</p>
+<span class="badge">Free Delivery</span> <span class="badge" style="background:#16a34a;">In Stock</span>
+</div>
+</div>
+
+<table>
+<thead>
+<tr>
+<th>Size</th>
+<th>Chest (in)</th>
+<th>Length (in)</th>
+<th>Shoulder (in)</th>
+<th>Best For</th>
+<th>Price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><b>XS</b></td>
+<td>32</td>
+<td>24</td>
+<td>14</td>
+<td>Bust 30-32"</td>
+<td>₹399</td>
+</tr>
+<tr>
+<td><b>S</b></td>
+<td>34</td>
+<td>25</td>
+<td>14.5</td>
+<td>Bust 32-34"</td>
+<td>₹449</td>
+</tr>
+<tr class="highlight">
+<td><b>M ⭐ Your Size</b></td>
+<td>36</td>
+<td>26</td>
+<td>15</td>
+<td>Bust 34-36"</td>
+<td>₹499</td>
+</tr>
+<tr>
+<td><b>L</b></td>
+<td>38</td>
+<td>27</td>
+<td>15.5</td>
+<td>Bust 36-38"</td>
+<td>₹549</td>
+</tr>
+<tr>
+<td><b>XL</b></td>
+<td>40</td>
+<td>28</td>
+<td>16</td>
+<td>Bust 38-40"</td>
+<td>₹599</td>
+</tr>
+<tr>
+<td><b>XXL</b></td>
+<td>42</td>
+<td>29</td>
+<td>16.5</td>
+<td>Bust 40-42"</td>
+<td>₹649</td>
+</tr>
+</tbody>
+</table>
+
+<div class="note">
+<b>How to Measure:</b> Chest - Around fullest part | Length - From shoulder to hem | All sizes in inches. 1 inch = 2.54 cm. If in doubt, order one size larger.
+</div>
+
+<p style="text-align:center; font-size:11px; color:#94a3b8; margin-top:12px;">© 2026 Siya Gupta | Q18 - E-commerce style size chart using table, thead, tbody, tr, th, td, colspan, rowspan</p>
+
+</div>
+</body>
+</html>

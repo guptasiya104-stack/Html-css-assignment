@@ -1,0 +1,144 @@
+35 Submit the finished Flexbox landing-page section.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Siya Gupta">
+<title>Assignment 35 - Finished Flexbox Landing Page - Siya Gupta</title>
+<style>
+*{margin:0; padding:0; box-sizing:border-box;}
+body{font-family:Arial, sans-serif; background:#ffffff; color:#0f172a;}
+
+/* NAVBAR - FLEX */
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 6%;
+  background:white;
+  border-bottom:1px solid #e2e8f0;
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+.logo{font-weight:800; font-size:18px;}
+.nav-links{display:flex; gap:18px; list-style:none;}
+.nav-links a{text-decoration:none; color:#475569; font-size:14px; font-weight:600;}
+.nav-btn{background:#2563eb; color:white; padding:8px 16px; border-radius:99px; text-decoration:none; font-size:13px; font-weight:700;}
+
+/* HERO - FLEX */
+.hero{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:30px;
+  padding:60px 6%;
+  background:linear-gradient(135deg, #eff6ff, #f8fafc);
+  flex-wrap:wrap;
+}
+.hero-text{flex:1 1 380px;}
+.hero-text h1{font-size:42px; line-height:1.1;}
+.hero-text span{color:#2563eb;}
+.hero-text p{margin-top:10px; color:#64748b; font-size:15px;}
+.hero-actions{display:flex; gap:12px; margin-top:18px; flex-wrap:wrap;}
+.hero-image{flex:1 1 350px; display:flex; justify-content:center;}
+.hero-image img{width:100%; max-width:420px; border-radius:16px; box-shadow:0 20px 40px rgba(0,0,0,0.12);}
+.btn-p{background:#2563eb; color:white; padding:11px 20px; border-radius:10px; text-decoration:none; font-weight:700; font-size:14px;}
+.btn-s{background:white; border:1px solid #e2e8f0; padding:11px 20px; border-radius:10px; text-decoration:none; color:#0f172a; font-weight:700; font-size:14px;}
+
+/* PRODUCT LISTING - FLEX WRAP */
+.section{padding:40px 6%;}
+.section h2{text-align:center; font-size:24px;}
+.products{
+  display:flex;
+  flex-wrap:wrap;
+  gap:16px;
+  justify-content:center;
+  margin-top:20px;
+}
+.p-card{
+  flex:1 1 210px;
+  max-width:230px;
+  background:white;
+  border:1px solid #e2e8f0;
+  border-radius:12px;
+  overflow:hidden;
+}
+.p-card img{width:100%; height:140px; object-fit:cover;}
+.p-body{padding:10px;}
+.p-body h4{font-size:13px;}
+.price{color:#2563eb; font-weight:700; font-size:13px; margin-top:4px;}
+
+/* FOOTER - FLEX CENTERED */
+.footer{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  padding:20px;
+  background:#0f172a;
+  color:#94a3b8;
+  font-size:11px;
+  text-align:center;
+  gap:6px;
+}
+
+@media(max-width:700px){
+  .nav-links{display:none;}
+  .hero{flex-direction:column; text-align:center;}
+  .hero-actions{justify-content:center;}
+  .p-card{max-width:100%; flex:1 1 100%;}
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+<div class="logo">Siya Gupta</div>
+<ul class="nav-links">
+<li><a href="assignment31.html">Menu (31)</a></li>
+<li><a href="assignment32.html">Login (32)</a></li>
+<li><a href="assignment33.html">Listing (33)</a></li>
+<li><a href="assignment34.html">Nav+Hero (34)</a></li>
+</ul>
+<a href="#" class="nav-btn">Final - 35</a>
+</nav>
+
+<section class="hero">
+<div class="hero-text">
+<p style="font-size:11px; font-weight:700; color:#2563eb; letter-spacing:1px;">ASSIGNMENT 35 | FINISHED FLEXBOX LANDING PAGE</p>
+<h1>Finished <span>Flexbox</span> Landing Page by Siya Gupta</h1>
+<p>This landing page combines all Flexbox concepts: display:flex, justify-content, align-items, flex-wrap, flex:1 1 basis, gap, and perfect centering. Responsive on mobile & desktop.</p>
+<div class="hero-actions">
+<a href="assignment30.html" class="btn-p">View Cards</a>
+<a href="registration.html" class="btn-s">Register Now</a>
+</div>
+<p style="font-size:11px; margin-top:12px; color:#94a3b8;">BCA 1st Year | Invertis University Bareilly | 7895673750</p>
+</div>
+<div class="hero-image">
+<img src="https://picsum.photos/600/400?random=35" alt="Flexbox Landing">
+</div>
+</section>
+
+<div class="section" style="background:#f8fafc;">
+<h2>Featured Products - Flex Wrap Listing</h2>
+<div class="products">
+<div class="p-card"><img src="https://picsum.photos/300/200?random=11"><div class="p-body"><h4>Wireless Headphones</h4><div class="price">₹1,999</div></div></div>
+<div class="p-card"><img src="https://picsum.photos/300/200?random=12"><div class="p-body"><h4>Smart Watch</h4><div class="price">₹2,499</div></div></div>
+<div class="p-card"><img src="https://picsum.photos/300/200?random=13"><div class="p-body"><h4>Gaming Mouse</h4><div class="price">₹799</div></div></div>
+<div class="p-card"><img src="https://picsum.photos/300/200?random=14"><div class="p-body"><h4>Mechanical Keyboard</h4><div class="price">₹3,499</div></div></div>
+</div>
+</div>
+
+<div class="footer">
+<b style="color:white;">Flexbox Landing Page - Assignment 31 to 35 Complete</b>
+<span>Siya Gupta | BCA 1st Year | Guptasiya104@gmail.com | Aligarh/Bareilly, UP | 7895673750</span>
+<span>© 2026 | All Flexbox Concepts Used: display:flex, justify-content, align-items, flex-wrap, flex-direction, flex: grow shrink basis, gap, centered layout</span>
+</div>
+
+</body>
+</html>
+git add assignment35.html
+git commit -m "feat: finished flexbox landing-page section - assignment 35 final submission"
+git push

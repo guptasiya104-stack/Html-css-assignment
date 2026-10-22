@@ -1,0 +1,160 @@
+33 Build a product-listing style layout using flex-wrap.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Siya Gupta">
+<title>Assignment 33 - Product Listing with Flex-Wrap - Siya Gupta</title>
+<style>
+*{margin:0; padding:0; box-sizing:border-box;}
+body{font-family:Arial, sans-serif; background:#f1f5f9; padding:20px; color:#334155;}
+h1{text-align:center; color:#0f172a;}
+.sub{text-align:center; font-size:12px; color:#64748b; margin-bottom:16px;}
+
+.product-list{
+  display: flex; /* Requirement */
+  flex-wrap: wrap; /* Requirement - wraps to next line */
+  gap: 16px;
+  justify-content: center; /* Center items */
+  max-width: 1000px;
+  margin: auto;
+}
+
+.product-card{
+  flex: 1 1 220px; /* grow shrink basis 220px */
+  max-width: 240px;
+  min-width: 200px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: 0.2s;
+}
+.product-card:hover{transform:translateY(-4px); box-shadow:0 10px 20px rgba(0,0,0,0.08);}
+.product-card img{width:100%; height:150px; object-fit:cover; display:block;}
+.body{padding:12px;}
+.body h3{font-size:14px; color:#0f172a;}
+.price{font-size:14px; font-weight:700; color:#2563eb; margin-top:6px;}
+.rating{font-size:11px; color:#f59e0b;}
+.btn{width:100%; margin-top:8px; background:#0f172a; color:white; border:none; padding:8px; border-radius:8px; font-size:12px; font-weight:700; cursor:pointer;}
+
+@media(max-width:500px){
+  .product-card{max-width:100%; flex: 1 1 100%;}
+}
+</style>
+</head>
+<body>
+
+<h1>Product Listing - Flex Wrap</h1>
+<p class="sub">Assignment 33 | Siya Gupta | BCA 1st Year | Using display:flex + flex-wrap:wrap | 7895673750</p>
+
+<div class="product-list">
+
+<div class="product-card">
+<img src="https://picsum.photos/300/200?random=1" alt="Product">
+<div class="body">
+<h3>Wireless Headphones</h3>
+<div class="rating">⭐⭐⭐⭐⭐ 4.9</div>
+<div class="price">₹1,999</div>
+<button class="btn">Add to Cart</button>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://picsum.photos/300/200?random=2" alt="Product">
+<div class="body">
+<h3>Smart Watch</h3>
+<div class="rating">⭐⭐⭐⭐ 4.7</div>
+<div class="price">₹2,499</div>
+<button class="btn">Add to Cart</button>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://picsum.photos/300/200?random=3" alt="Product">
+<div class="body">
+<h3>Gaming Mouse</h3>
+<div class="rating">⭐⭐⭐⭐⭐ 4.8</div>
+<div class="price">₹799</div>
+<button class="btn">Add to Cart</button>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://picsum.photos/300/200?random=4" alt="Product">
+<div class="body">
+<h3>Bluetooth Speaker</h3>
+<div class="rating">⭐⭐⭐⭐ 4.6</div>
+<div class="price">₹1,299</div>
+<button class="btn">Add to Cart</button>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://picsum.photos/300/200?random=5" alt="Product">
+<div class="body">
+<h3>Laptop Stand</h3>
+<div class="rating">⭐⭐⭐⭐⭐ 5.0</div>
+<div class="price">₹999</div>
+<button class="btn">Add to Cart</button>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://picsum.photos/300/200?random=6" alt="Product">
+<div class="body">
+<h3>Mechanical Keyboard</h3>
+<div class="rating">⭐⭐⭐⭐ 4.8</div>
+<div class="price">₹3,499</div>
+<button class="btn">Add to Cart</button>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://picsum.photos/300/200?random=7" alt="Product">
+<div class="body">
+<h3>Webcam HD</h3>
+<div class="rating">⭐⭐⭐⭐ 4.5</div>
+<div class="price">₹1,599</div>
+<button class="btn">Add to Cart</button>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://picsum.photos/300/200?random=8" alt="Product">
+<div class="body">
+<h3>USB Hub</h3>
+<div class="rating">⭐⭐⭐⭐⭐ 4.9</div>
+<div class="price">₹499</div>
+<button class="btn">Add to Cart</button>
+</div>
+</div>
+
+</div>
+
+<div style="max-width:800px; margin:20px auto; background:white; border:1px solid #e2e8f0; border-radius:10px; padding:12px; font-size:12px;">
+<b>Code used:</b><br>
+<span style="font-family:monospace; background:#f8fafc; padding:6px; display:block; border-radius:6px; margin-top:6px;">
+.product-list{<br>
+&nbsp;&nbsp;display:flex;<br>
+&nbsp;&nbsp;flex-wrap:wrap; /* wraps items to next line */<br>
+&nbsp;&nbsp;gap:16px;<br>
+&nbsp;&nbsp;justify-content:center;<br>
+}<br>
+.product-card{<br>
+&nbsp;&nbsp;flex: 1 1 220px; /* grow=1, shrink=1, basis=220px */<br>
+&nbsp;&nbsp;max-width:240px;<br>
+}
+</span>
+<p style="margin-top:8px;">Flex-wrap se products automatically next line me chale jate hain, screen chhota hone par 4 se 2 se 1 column ho jata hai. No media query needed for wrapping, only for full width on very small screen.</p>
+</div>
+
+<p style="text-align:center; font-size:11px; color:#94a3b8; margin-top:15px;">© 2026 Siya Gupta | Assignment 33 - Product Listing using Flex-Wrap | Guptasiya104@gmail.com</p>
+
+</body>
+</html>
+git add assignment33.html
+git commit -m "feat: product-listing style layout using flex-wrap - assignment 33"
+git push

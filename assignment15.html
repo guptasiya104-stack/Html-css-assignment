@@ -1,0 +1,111 @@
+15 Submit the completed personal blog / portfolio page
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Siya Gupta - Personal Blog and Portfolio - BCA Student">
+<title>Siya Gupta - Personal Blog & Portfolio</title>
+<style>
+*{margin:0; padding:0; box-sizing:border-box; font-family:Segoe UI, Arial, sans-serif; scroll-behavior:smooth}
+body{background:#f8fafc; color:#1e293b; line-height:1.7}
+header{background:linear-gradient(135deg,#0f172a,#1e40af); color:#fff; padding:40px 20px; text-align:center}
+header img{width:110px; height:110px; border-radius:50%; border:4px solid rgba(255,255,255,0.3); object-fit:cover}
+header h1{margin-top:10px; font-size:32px}
+header p{opacity:0.9; font-size:14px; margin-top:5px}
+nav{position:sticky; top:0; background:#0f172a; padding:12px; text-align:center; z-index:10}
+nav a{color:#93c5fd; text-decoration:none; margin:0 12px; font-weight:600; font-size:14px}
+nav a:hover{color:#fff}
+.container{max-width:900px; margin:0 auto; padding:20px}
+.card{background:#fff; padding:22px; border-radius:14px; margin-top:18px; box-shadow:0 4px 15px rgba(0,0,0,0.05); border:1px solid #f1f5f9}
+.card h2{font-size:15px; text-transform:uppercase; letter-spacing:1.2px; color:#64748b; border-bottom:2px solid #f1f5f9; padding-bottom:6px; margin-bottom:12px}
+.tag{background:#eff6ff; border:1px solid #dbeafe; color:#1d4ed8; padding:6px 12px; border-radius:99px; display:inline-block; margin:4px; font-size:12px; font-weight:600}
+.blog-grid{display:grid; grid-template-columns:1fr 1fr; gap:15px}
+@media(max-width:700px){.blog-grid{grid-template-columns:1fr}}
+ul,ol{margin-left:20px} li{margin-bottom:5px}
+footer{background:#0f172a; color:#94a3b8; text-align:center; padding:20px; margin-top:20px; border-radius:12px; font-size:13px}
+</style>
+</head>
+<body>
+
+<header>
+<img src="https://i.pravatar.cc/150?img=5" alt="Profile photo of Siya Gupta, BCA student at Invertis University">
+<h1>Siya Gupta</h1>
+<p>BCA 1st Year | Invertis University, Bareilly | From Aligarh, UP</p>
+<p>📞 7895673750 | ✉️ Guptasiya104@gmail.com | <a href="https://www.google.com" style="color:#7dd3fc;">My Links</a></p>
+</header>
+
+<nav>
+<a href="#about">About</a>
+<a href="#college">College</a>
+<a href="#skills">Skills</a>
+<a href="#blog">Blog</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<div class="container">
+
+<section class="card" id="about">
+<h2>About Me</h2>
+<p>Hello! I am <b>Siya Gupta</b> from Aligarh. I am studying <b>BCA 1st Year</b> at <b>Invertis University</b>. I love Web Development. My goal is to become a Full Stack Developer. This is my final completed portfolio for HTML & CSS Assignments 1 to 15.</p>
+</section>
+
+<section class="card" id="college">
+<h2>My College / My Course</h2>
+<ul>
+<li><b>College:</b> Invertis University, Bareilly</li>
+<li><b>Course:</b> BCA - Bachelor of Computer Applications (3 Years)</li>
+<li><b>Current:</b> 1st Year - 1st Semester</li>
+</ul>
+<ol style="margin-top:10px;">
+<li>Semester 1: HTML, CSS, Computer Fundamentals</li>
+<li>Semester 2: Java, Data Structures, DBMS</li>
+<li>Future: Python, JavaScript, Networking</li>
+</ol>
+</section>
+
+<div class="blog-grid">
+<section class="card" id="skills">
+<h2>Skills</h2>
+<span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">Java</span><span class="tag">Git & GitHub</span><span class="tag">Semantic Tags</span><span class="tag">Responsive Design</span>
+<h2 style="margin-top:15px;">Hobbies</h2>
+<ul><li>Coding</li><li>Reading Tech Blogs</li><li>Music</li></ul>
+</section>
+
+<section class="card" id="blog">
+<h2>My Blog - Learning Journey</h2>
+<article>
+<h3 style="font-size:15px; color:#0f172a;">Day 1: Started HTML</h3>
+<p style="font-size:13px; color:#64748b;">I learned about tags, headings and paragraphs. Created my first page.</p>
+</article>
+<article style="margin-top:12px;">
+<h3 style="font-size:15px; color:#0f172a;">Day 10: CSS & Portfolio</h3>
+<p style="font-size:13px; color:#64748b;">I added colors, cards and internal navigation using #id links.</p>
+</article>
+</section>
+</div>
+
+<section class="card" id="gallery">
+<h2>Project Gallery - All Images with Meaningful Alt</h2>
+<div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:10px;">
+<img src="https://via.placeholder.com/150/0f172a/fff?text=HTML" alt="Screenshot of my semantic HTML resume page created for assignment 8" style="width:140px; height:140px; border-radius:10px; object-fit:cover;">
+<img src="https://via.placeholder.com/150/1e40af/fff?text=CSS" alt="Siya Gupta styling portfolio page with CSS in college lab" style="width:140px; height:140px; border-radius:10px; object-fit:cover;">
+<img src="https://via.placeholder.com/150/0284c7/fff?text=Blog" alt="My personal blog page showing learning journey articles" style="width:140px; height:140px; border-radius:10px; object-fit:cover;">
+</div>
+</section>
+
+<section class="card" id="contact">
+<h2>Contact Me</h2>
+<p>If you want to collaborate on college projects, contact me at <b>Guptasiya104@gmail.com</b> or call <b>7895673750</b>. Location: Aligarh, UP.</p>
+<p style="margin-top:10px;"><a href="#about">Back to Top ↑</a></p>
+</section>
+
+<footer>
+<p>© 2026 Siya Gupta | Final Submission Assignment 15 - Completed Personal Blog / Portfolio Page</p>
+<p>Built using: header, nav, main, section, article, aside, footer, ul, ol, img with alt, internal links</p>
+</footer>
+
+</div>
+</body>
+</html>

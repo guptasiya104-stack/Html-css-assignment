@@ -1,0 +1,68 @@
+37 Build a responsive product grid that reflows automatically.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Siya Gupta">
+<title>Assignment 37 - Responsive Product Grid - Siya Gupta</title>
+<style>
+*{margin:0; padding:0; box-sizing:border-box;}
+body{font-family:Arial, sans-serif; background:#f1f5f9; padding:20px; color:#0f172a;}
+h1{text-align:center;}
+.sub{text-align:center; font-size:12px; color:#64748b; margin-bottom:18px;}
+
+/* AUTO REFLOW GRID - No media queries needed */
+.product-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  max-width: 1100px;
+  margin: auto;
+}
+.card{
+  background:white;
+  border:1px solid #e2e8f0;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 4px 12px rgba(0,0,0,0.05);
+  display:flex;
+  flex-direction:column;
+}
+.card img{width:100%; height:150px; object-fit:cover;}
+.info{padding:10px; flex:1; display:flex; flex-direction:column;}
+.info h3{font-size:13px;}
+.price{margin-top:auto; padding-top:8px; display:flex; justify-content:space-between; align-items:center;}
+.price b{color:#2563eb;}
+.price button{background:#0f172a; color:white; border:none; padding:6px 12px; border-radius:6px; font-size:11px; cursor:pointer;}
+.tag{font-size:10px; color:#16a34a; font-weight:700; background:#dcfce7; padding:2px 6px; border-radius:99px; display:inline-block; width:fit-content; margin-top:4px;}
+</style>
+</head>
+<body>
+
+<h1>Responsive Product Grid - Auto Reflow</h1>
+<p class="sub">Assignment 37 | Siya Gupta | BCA 1st Year | grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) | No media query needed | 7895673750</p>
+
+<div class="product-grid">
+<div class="card"><img src="https://picsum.photos/300/200?random=51"><div class="info"><h3>Wireless Earbuds</h3><span class="tag">In Stock</span><div class="price"><b>₹1,299</b><button>Add</button></div></div></div>
+<div class="card"><img src="https://picsum.photos/300/200?random=52"><div class="info"><h3>Smart Watch</h3><span class="tag">20% Off</span><div class="price"><b>₹2,499</b><button>Add</button></div></div></div>
+<div class="card"><img src="https://picsum.photos/300/200?random=53"><div class="info"><h3>Gaming Mouse</h3><span class="tag">Hot</span><div class="price"><b>₹799</b><button>Add</button></div></div></div>
+<div class="card"><img src="https://picsum.photos/300/200?random=54"><div class="info"><h3>Keyboard</h3><span class="tag">New</span><div class="price"><b>₹1,499</b><button>Add</button></div></div></div>
+<div class="card"><img src="https://picsum.photos/300/200?random=55"><div class="info"><h3>Webcam HD</h3><span class="tag">Best Seller</span><div class="price"><b>₹1,999</b><button>Add</button></div></div></div>
+<div class="card"><img src="https://picsum.photos/300/200?random=56"><div class="info"><h3>Laptop Stand</h3><span class="tag">In Stock</span><div class="price"><b>₹999</b><button>Add</button></div></div></div>
+<div class="card"><img src="https://picsum.photos/300/200?random=57"><div class="info"><h3>USB Hub</h3><span class="tag">Sale</span><div class="price"><b>₹499</b><button>Add</button></div></div></div>
+<div class="card"><img src="https://picsum.photos/300/200?random=58"><div class="info"><h3>Power Bank</h3><span class="tag">Limited</span><div class="price"><b>₹1,199</b><button>Add</button></div></div></div>
+<div class="card"><img src="https://picsum.photos/300/200?random=59"><div class="info"><h3>Bluetooth Speaker</h3><span class="tag">Trending</span><div class="price"><b>₹1,799</b><button>Add</button></div></div></div>
+<div class="card"><img src="https://picsum.photos/300/200?random=60"><div class="info"><h3>SSD 512GB</h3><span class="tag">Top Rated</span><div class="price"><b>₹3,299</b><button>Add</button></div></div></div>
+</div>
+
+<div style="max-width:800px; margin:20px auto; background:white; padding:12px; border:1px solid #e2e8f0; border-radius:10px; font-size:12px;">
+<b>Auto Reflow Logic:</b> <code>repeat(auto-fit, minmax(180px, 1fr))</code> - Desktop pe 5-6 columns, tablet pe 3-4, mobile pe 1-2. Automatically reflows, no media queries.<br>
+Siya Gupta | Invertis University | Guptasiya104@gmail.com
+</div>
+
+</body>
+</html>
+git add assignment37.html
+git commit -m "feat: responsive product grid that reflows automatically - assignment 37"
+git push

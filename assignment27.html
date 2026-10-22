@@ -1,0 +1,116 @@
+27 Create three differently styled card variants using border-radius and backgrounds.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Siya Gupta">
+<title>Assignment 27 - Three Card Variants - Siya Gupta</title>
+<style>
+*{margin:0; padding:0; box-sizing:border-box;}
+body{font-family:Arial, sans-serif; background:#f1f5f9; padding:20px; color:#334155;}
+.container{max-width:900px; margin:auto;}
+h1{text-align:center; color:#0f172a;}
+.sub{text-align:center; font-size:12px; color:#64748b; margin-bottom:20px;}
+.grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:16px;}
+@media(max-width:700px){.grid{grid-template-columns:1fr;}}
+
+/* Common Card Base */
+.card{padding:20px; color:#1e293b;}
+
+/* VARIANT 1 - Small Radius + Solid Background */
+.card-1{
+ background: #ffffff;
+ border: 1px solid #e2e8f0;
+ border-radius: 8px; /* Small radius */
+ box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.card-1 h3{color:#0f172a;}
+
+/* VARIANT 2 - Large Radius + Gradient Background */
+.card-2{
+ background: linear-gradient(135deg, #2563eb, #7c3aed);
+ color: white;
+ border-radius: 24px; /* Large radius */
+ box-shadow: 0 8px 20px rgba(37,99,235,0.3);
+}
+.card-2 h3{color:white;}
+.card-2 p{color:#dbeafe;}
+
+/* VARIANT 3 - Pill / Asymmetric Radius + Image Background + Pattern */
+.card-3{
+ background: #fef3c7; /* Fallback */
+ background-image: radial-gradient(#fbbf24 1px, transparent 1px);
+ background-size: 18px 18px;
+ background-color: #fffbeb;
+ border: 2px dashed #f59e0b;
+ border-radius: 16px 2px 16px 2px; /* Asymmetric radius - top-left & bottom-right large */
+}
+.card-3 h3{color:#92400e;}
+
+.badge{font-size:10px; font-weight:700; padding:4px 8px; border-radius:99px; display:inline-block; margin-bottom:10px;}
+</style>
+</head>
+<body>
+
+<div class="container">
+<h1>Three Card Variants</h1>
+<p class="sub">Assignment 27 | Siya Gupta | Using border-radius & backgrounds | 7895673750</p>
+
+<div class="grid">
+
+<!-- CARD VARIANT 1 -->
+<div class="card card-1">
+<span class="badge" style="background:#f1f5f9; color:#0f172a;">VARIANT 1</span>
+<h3>Small Radius + Solid BG</h3>
+<p style="font-size:13px; margin-top:8px;"><b>border-radius: 8px;</b><br>background: #ffffff (solid white)<br>border: 1px solid #e2e8f0<br>Use: Clean, professional cards for forms, info</p>
+<ul style="font-size:12px; margin:10px 0 0 15px;">
+<li>8px - subtle rounded corners</li>
+<li>Solid background</li>
+<li>Light shadow</li>
+</ul>
+</div>
+
+<!-- CARD VARIANT 2 -->
+<div class="card card-2">
+<span class="badge" style="background:rgba(255,255,255,0.2); color:white;">VARIANT 2</span>
+<h3>Large Radius + Gradient BG</h3>
+<p style="font-size:13px; margin-top:8px;"><b>border-radius: 24px;</b><br>background: linear-gradient(135deg, #2563eb, #7c3aed)<br>Use: Hero cards, premium, CTA cards</p>
+<ul style="font-size:12px; margin:10px 0 0 15px;">
+<li>24px - very rounded, soft</li>
+<li>Gradient background</li>
+<li>White text</li>
+</ul>
+</div>
+
+<!-- CARD VARIANT 3 -->
+<div class="card card-3">
+<span class="badge" style="background:#fde68a; color:#92400e;">VARIANT 3</span>
+<h3>Asymmetric Radius + Pattern BG</h3>
+<p style="font-size:13px; margin-top:8px;"><b>border-radius: 16px 2px 16px 2px;</b><br>background: pattern dots + #fffbeb<br>border: 2px dashed #f59e0b<br>Use: Fun, creative, notice cards</p>
+<ul style="font-size:12px; margin:10px 0 0 15px;">
+<li>16px 2px 16px 2px - asymmetric</li>
+<li>Pattern background (dots)</li>
+<li>Dashed border</li>
+</ul>
+</div>
+
+</div>
+
+<div style="background:white; border-radius:12px; padding:15px; margin-top:20px; border:1px solid #e2e8f0;">
+<h3 style="font-size:14px;">Code Explanation for Teacher:</h3>
+<p style="font-size:12px; margin-top:6px; background:#f8fafc; padding:10px; border-radius:8px; font-family:monospace;">
+/* V1 */ .card-1{ border-radius:8px; background:#fff; }<br>
+/* V2 */ .card-2{ border-radius:24px; background:linear-gradient(135deg, #2563eb, #7c3aed); }<br>
+/* V3 */ .card-3{ border-radius:16px 2px 16px 2px; background-image:radial-gradient(...) + #fffbeb; }
+</p>
+</div>
+
+<p style="text-align:center; font-size:11px; color:#94a3b8; margin-top:15px;">© 2026 Siya Gupta | Assignment 27 - Three Differently Styled Card Variants | Guptasiya104@gmail.com</p>
+</div>
+
+</body>
+</html>
+git add assignment27.html
+git commit -m "feat: three differently styled card variants using border-radius and backgrounds - assignment 27"
+git push

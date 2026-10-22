@@ -1,0 +1,144 @@
+31 Create a simple responsive menu bar using display:flex.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Siya Gupta">
+<title>Assignment 31 - Responsive Menu with Flex - Siya Gupta</title>
+<style>
+*{margin:0; padding:0; box-sizing:border-box;}
+body{font-family:Arial, sans-serif; background:#f8fafc; color:#334155;}
+
+.navbar{
+  display: flex; /* Main requirement */
+  justify-content: space-between; /* Logo left, links center, button right */
+  align-items: center;
+  background: #0f172a;
+  padding: 12px 20px;
+  flex-wrap: wrap; /* Allows wrapping on mobile */
+  position: sticky;
+  top:0;
+  z-index: 10;
+}
+.logo{
+  font-weight: 800;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+}
+.nav-links{
+  display: flex; /* Flex for links */
+  gap: 18px;
+  list-style: none;
+  align-items: center;
+}
+.nav-links a{
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+.nav-links a:hover, .nav-links a.active{
+  color: white;
+  background: #1e293b;
+}
+.btn{
+  background: #2563eb;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 99px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* Hamburger for mobile */
+.menu-toggle{display:none;}
+.hamburger{display:none; color:white; font-size:22px; cursor:pointer;}
+
+/* Responsive - Mobile View */
+@media(max-width:650px){
+  .hamburger{display:block;}
+  .nav-links{
+    display: none; /* Hidden by default on mobile */
+    flex-direction: column; /* Stack vertically */
+    width: 100%;
+    background: #0f172a;
+    margin-top: 12px;
+    padding: 10px 0;
+    gap: 0;
+  }
+  .nav-links li{width:100%;}
+  .nav-links a{display:block; padding:12px 10px;}
+  .navbar-right{width:100%; margin-top:10px; display:none;}
+  .navbar-right .btn{display:block; text-align:center;}
+  
+  /* When checkbox checked, show menu */
+  .menu-toggle:checked ~ .nav-links,
+  .menu-toggle:checked ~ .navbar-right{
+    display: flex;
+  }
+}
+
+.content{max-width:800px; margin:20px auto; padding:20px; background:white; border:1px solid #e2e8f0; border-radius:12px;}
+.code{background:#0f172a; color:#93c5fd; padding:12px; border-radius:8px; font-family:monospace; font-size:12px; margin-top:10px; overflow-x:auto;}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="#" class="logo">Siya Gupta</a>
+
+  <input type="checkbox" id="menu-toggle" class="menu-toggle">
+  <label for="menu-toggle" class="hamburger">☰</label>
+
+  <ul class="nav-links">
+    <li><a href="assignment20.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="registration.html">Registration</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="assignment30.html">Cards</a></li>
+  </ul>
+
+  <div class="navbar-right">
+    <a href="#" class="btn">Login</a>
+  </div>
+</nav>
+
+<div class="content">
+<h2>Responsive Menu Bar using display:flex</h2>
+<p style="font-size:13px; margin-top:8px;">Assignment 31 | Siya Gupta | BCA 1st Year | Invertis University</p>
+
+<p style="font-size:13px; margin-top:15px;"><b>Desktop:</b> Logo left, links center, button right - all in one row using <code>display:flex; justify-content:space-between; align-items:center;</code></p>
+<p style="font-size:13px; margin-top:8px;"><b>Mobile (650px se kam):</b> Menu hamburger (☰) pe click karne par links vertically stack ho jate hain using <code>flex-direction:column;</code> and <code>flex-wrap:wrap;</code></p>
+
+<div class="code">
+.navbar{<br>
+&nbsp;&nbsp;display: flex;<br>
+&nbsp;&nbsp;justify-content: space-between;<br>
+&nbsp;&nbsp;align-items: center;<br>
+&nbsp;&nbsp;flex-wrap: wrap;<br>
+}<br>
+.nav-links{<br>
+&nbsp;&nbsp;display: flex;<br>
+&nbsp;&nbsp;gap: 18px;<br>
+}<br>
+@media(max-width:650px){<br>
+&nbsp;&nbsp;.nav-links{ flex-direction: column; width:100%; }<br>
+}
+</div>
+
+<p style="font-size:12px; margin-top:12px; color:#16a34a;"><b>Test:</b> Browser window ko chhota karke dekho - menu responsive ho jayega, mobile me ☰ icon ayega.</p>
+</div>
+
+<p style="text-align:center; font-size:11px; color:#94a3b8; margin-top:15px;">© 2026 Siya Gupta | Assignment 31 - Responsive Menu using Flex | 7895673750</p>
+
+</body>
+</html>
+git add assignment31.html
+git commit -m "feat: responsive menu bar using display:flex - assignment 31"
+git push

@@ -1,0 +1,95 @@
+Submit the finished personal-introduction HTML page.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siya Gupta - Personal Introduction</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{margin:0; padding:0; box-sizing:border-box; font-family:'Inter', sans-serif}
+  body{background:#f8fafc; color:#1e293b; line-height:1.7}
+  .container{max-width:900px; margin:0 auto; padding:20px}
+  .hero{background:linear-gradient(135deg,#0f172a 0%, #1e40af 100%); color:#fff; border-radius:20px; padding:40px; display:flex; flex-wrap:wrap; gap:30px; align-items:center; margin-top:20px}
+  .hero img{width:130px; height:130px; border-radius:50%; border:4px solid rgba(255,255,255,0.3); object-fit:cover}
+  .hero h1{font-size:36px; margin-bottom:5px} .hero .role{color:#93c5fd; font-weight:600; letter-spacing:1px}
+  .hero .info{margin-top:12px; font-size:14px; opacity:0.9}
+  .hero a{color:#7dd3fc; text-decoration:none; font-weight:600}
+  .grid{display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:20px}
+  @media(max-width:700px){.grid{grid-template-columns:1fr} .hero{padding:25px}}
+  .card{background:#fff; border-radius:16px; padding:24px; box-shadow:0 4px 20px rgba(0,0,0,0.05); border:1px solid #f1f5f9}
+  .card h2{font-size:14px; text-transform:uppercase; letter-spacing:1.5px; color:#64748b; margin-bottom:12px; border-bottom:2px solid #f1f5f9; padding-bottom:8px}
+  .tag{background:#eff6ff; border:1px solid #dbeafe; color:#1d4ed8; padding:6px 14px; border-radius:99px; display:inline-block; margin:5px 5px 5px 0; font-size:13px; font-weight:600}
+  .tag.java{background:#fef3c7; border-color:#fde68a; color:#92400e}
+  ul{padding-left:18px} li{margin-bottom:6px; font-size:15px}
+  table{width:100%; border-collapse:collapse} th,td{padding:10px; text-align:left; border-bottom:1px solid #f1f5f9; font-size:14px} th{color:#64748b; font-size:12px; text-transform:uppercase}
+  .footer{text-align:center; padding:30px; color:#94a3b8; font-size:13px}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="hero">
+    <img src="https://i.pravatar.cc/150?img=5" alt="Siya Gupta">
+    <div>
+      <h1>Siya Gupta</h1>
+      <div class="role">BCA Student • Aspiring Web Developer</div>
+      <div class="info">
+        📍 Aligarh, Uttar Pradesh<br>
+        📞 7895673750 | ✉️ Guptasiya104@gmail.com<br>
+        🎓 Invertis University | BCA 1st Year
+      </div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h2>About Me</h2>
+      <p>Hello! I am <b>Siya Gupta</b> from Aligarh. I am currently pursuing <b>BCA 1st Year</b> from <b>Invertis University</b>. I am passionate about Web Development. I love to create clean and simple websites using HTML, CSS and Java. I am a quick learner and always ready to learn new technologies.</p>
+    </div>
+    <div class="card">
+      <h2>My Skills</h2>
+      <span class="tag">HTML5</span>
+      <span class="tag">CSS3</span>
+      <span class="tag java">Java</span>
+      <span class="tag">Git & GitHub</span>
+      <span class="tag">Semantic HTML</span>
+      <span class="tag">Responsive Design</span>
+      <p style="margin-top:12px; font-size:14px; color:#64748b;">Currently learning: Advanced Java & JavaScript</p>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h2>Education</h2>
+      <table>
+        <tr><th>Course</th><th>Details</th></tr>
+        <tr><td><b>BCA</b></td><td>Invertis University, Aligarh (2025-Present)</td></tr>
+        <tr><td><b>12th</b></td><td>UP Board</td></tr>
+        <tr><td><b>10th</b></td><td>UP Board</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <h2>Hobbies & Interests</h2>
+      <ul>
+        <li>💻 <b>Coding</b> - Making small web pages</li>
+        <li>📚 <b>Reading</b> - Tech blogs</li>
+        <li>🎵 <b>Music</b> - Listening while coding</li>
+        <li>🏏 <b>Cricket</b> - Playing with friends</li>
+      </ul>
+      <h2 style="margin-top:20px">My Goal</h2>
+      <p>To become a skilled <b>Full Stack Developer</b> and get a good internship in my 2nd year.</p>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:20px;">
+    <h2>Contact Me</h2>
+    <p style="font-size:15px;">I am open for college projects and collaboration. You can contact me on:</p>
+    <p style="margin-top:10px;"><b>Email:</b> Guptasiya104@gmail.com | <b>Phone:</b> 7895673750 | <b>Location:</b> Aligarh</p>
+  </div>
+
+  <div class="footer">© 2026 Siya Gupta • Built with ❤️ using HTML & CSS</div>
+
+</div>
+</body>
+</html>

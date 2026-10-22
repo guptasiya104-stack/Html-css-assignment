@@ -1,0 +1,79 @@
+14 Improve an earlier assignment page using
+ correct semantic tags.
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Assignment 14 - Improved with Semantic Tags - Siya Gupta</title>
+<style>
+body{font-family:Arial; max-width:900px; margin:auto; padding:20px; background:#f8fafc; color:#1e293b; line-height:1.6}
+header,nav,main,section,article,aside,footer{border-radius:12px; margin-top:15px; padding:20px}
+header{background:#0f172a; color:#fff; text-align:center}
+nav{background:#1e293b; text-align:center}
+nav a{color:#93c5fd; margin:0 10px; text-decoration:none; font-weight:600}
+main{display:grid; grid-template-columns:2fr 1fr; gap:15px}
+section,article,aside{background:#fff; box-shadow:0 2px 10px rgba(0,0,0,0.05); border:1px solid #e2e8f0}
+footer{background:#0f172a; color:#94a3b8; text-align:center; font-size:13px}
+code{background:#f1f5f9; padding:2px 6px; border-radius:4px; font-size:13px}
+@media(max-width:700px){main{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- SEMANTIC TAGS IMPROVEMENT -->
+
+<header>
+<h1>Improved Page using Semantic Tags</h1>
+<p>Siya Gupta | BCA 1st Year | Invertis University | Assignment 14</p>
+</header>
+
+<nav>
+<a href="#about">About</a>
+<a href="#course">Course</a>
+<a href="#improvement">Improvement</a>
+</nav>
+
+<main>
+<div>
+<section id="about">
+<h2>About Me</h2>
+<p>I am <strong>Siya Gupta</strong> from Aligarh. This page was earlier made with only <code>&lt;div&gt;</code> tags. Now it is improved with correct semantic tags.</p>
+</section>
+
+<article id="course">
+<h2>My Course - BCA</h2>
+<p>BCA stands for Bachelor of Computer Applications. I am in 1st Year at Invertis University.</p>
+<ul>
+<li>Learning HTML, CSS, Java</li>
+<li>Want to become Frontend Developer</li>
+</ul>
+</article>
+
+<section id="improvement">
+<h2>What I Improved?</h2>
+<p><b>Before (Non-semantic):</b></p>
+<code>&lt;div id="header"&gt;...&lt;/div&gt;<br>&lt;div id="menu"&gt;...&lt;/div&gt;<br>&lt;div class="content"&gt;...&lt;/div&gt;</code>
+<p style="margin-top:10px;"><b>After (Semantic - Assignment 14):</b></p>
+<code>&lt;header&gt;...&lt;/header&gt;<br>&lt;nav&gt;...&lt;/nav&gt;<br>&lt;main&gt;<br>&nbsp;&nbsp;&lt;section&gt;...&lt;/section&gt;<br>&nbsp;&nbsp;&lt;article&gt;...&lt;/article&gt;<br>&nbsp;&nbsp;&lt;aside&gt;...&lt;/aside&gt;<br>&lt;/main&gt;<br>&lt;footer&gt;...&lt;/footer&gt;</code>
+</section>
+</div>
+
+<aside>
+<h3>Why Semantic Tags?</h3>
+<ul>
+<li><b>Accessibility:</b> Screen readers understand better</li>
+<li><b>SEO:</b> Google ranks better</li>
+<li><b>Readability:</b> Code is clean</li>
+</ul>
+<h3 style="margin-top:15px;">Contact</h3>
+<p>Guptasiya104@gmail.com<br>7895673750<br>Aligarh, UP</p>
+</aside>
+</main>
+
+<footer>
+<p>&copy; 2026 Siya Gupta | Assignment 14 - Earlier page improved using &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;section&gt;, &lt;article&gt;, &lt;aside&gt;, &lt;footer&gt; tags</p>
+</footer>
+
+</body>
+</html>

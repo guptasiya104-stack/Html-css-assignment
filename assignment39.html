@@ -1,0 +1,144 @@
+39 Build a responsive product grid with a header and sidebar using Grid
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Siya Gupta">
+<title>Assignment 39 - Product Grid with Header Sidebar - Grid - Siya Gupta</title>
+<style>
+*{margin:0; padding:0; box-sizing:border-box;}
+body{font-family:Arial, sans-serif; background:#f1f5f9; color:#0f172a;}
+
+.layout{
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  grid-template-rows: 60px 1fr 40px;
+  grid-template-areas:
+    "header header"
+    "sidebar products"
+    "footer footer";
+  min-height: 100vh;
+  gap: 14px;
+  padding: 14px;
+}
+
+.header{
+  grid-area: header;
+  background:#0f172a;
+  color:white;
+  border-radius:10px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 18px;
+}
+.sidebar{
+  grid-area: sidebar;
+  background:white;
+  border:1px solid #e2e8f0;
+  border-radius:10px;
+  padding:14px;
+}
+.products-wrap{
+  grid-area: products;
+  background:white;
+  border:1px solid #e2e8f0;
+  border-radius:10px;
+  padding:14px;
+}
+.footer{
+  grid-area: footer;
+  background:#0f172a;
+  color:#94a3b8;
+  border-radius:10px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:11px;
+}
+
+.product-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap:12px;
+  margin-top:12px;
+}
+.card{
+  border:1px solid #e2e8f0;
+  border-radius:10px;
+  overflow:hidden;
+  background:#f8fafc;
+}
+.card img{width:100%; height:120px; object-fit:cover;}
+.card .info{padding:8px;}
+.card h4{font-size:12px;}
+.card .price{color:#2563eb; font-weight:700; font-size:12px; margin-top:4px;}
+
+.sidebar h4{font-size:13px; margin-bottom:8px;}
+.filter{margin-bottom:12px;}
+.filter label{font-size:12px; display:block; margin:4px 0; color:#475569;}
+.sidebar a{display:block; padding:8px; font-size:12px; text-decoration:none; color:#334155; border-radius:6px;}
+.sidebar a:hover{background:#eff6ff; color:#2563eb;}
+
+@media(max-width:700px){
+  .layout{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "products"
+      "footer";
+  }
+  .product-grid{grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));}
+}
+</style>
+</head>
+<body>
+
+<div class="layout">
+
+<div class="header">
+<b>🛒 Siya's Store - Grid Layout</b>
+<span style="font-size:11px;">Assignment 39 | 7895673750</span>
+</div>
+
+<div class="sidebar">
+<h4>Categories</h4>
+<a href="#">All Products</a>
+<a href="#">Electronics</a>
+<a href="#">Accessories</a>
+<a href="#">Laptops</a>
+<div class="filter">
+<h4 style="margin-top:12px;">Filter</h4>
+<label><input type="checkbox"> Under ₹1000</label>
+<label><input type="checkbox"> ₹1000-₹3000</label>
+<label><input type="checkbox"> Best Seller</label>
+</div>
+<p style="font-size:11px; color:#94a3b8; margin-top:10px;">Siya Gupta<br>BCA 1st Year<br>Invertis University</p>
+</div>
+
+<div class="products-wrap">
+<h3>Product Grid with Header + Sidebar (Grid)</h3>
+<p style="font-size:11px; color:#64748b; margin-top:4px;">Layout: header+sidebar using named areas | Products: auto-fit auto reflow inside</p>
+<div class="product-grid">
+<div class="card"><img src="https://picsum.photos/300/200?random=61"><div class="info"><h4>Headphones</h4><div class="price">₹1,999</div></div></div>
+<div class="card"><img src="https://picsum.photos/300/200?random=62"><div class="info"><h4>Smart Watch</h4><div class="price">₹2,499</div></div></div>
+<div class="card"><img src="https://picsum.photos/300/200?random=63"><div class="info"><h4>Mouse</h4><div class="price">₹799</div></div></div>
+<div class="card"><img src="https://picsum.photos/300/200?random=64"><div class="info"><h4>Keyboard</h4><div class="price">₹1,299</div></div></div>
+<div class="card"><img src="https://picsum.photos/300/200?random=65"><div class="info"><h4>Speaker</h4><div class="price">₹1,499</div></div></div>
+<div class="card"><img src="https://picsum.photos/300/200?random=66"><div class="info"><h4>Laptop Stand</h4><div class="price">₹999</div></div></div>
+<div class="card"><img src="https://picsum.photos/300/200?random=67"><div class="info"><h4>Power Bank</h4><div class="price">₹1,199</div></div></div>
+<div class="card"><img src="https://picsum.photos/300/200?random=68"><div class="info"><h4>USB Hub</h4><div class="price">₹499</div></div></div>
+</div>
+</div>
+
+<div class="footer">© 2026 Siya Gupta | Assignment 39 - Responsive Product Grid with Header & Sidebar using CSS Grid | Guptasiya104@gmail.com</div>
+
+</div>
+
+</body>
+</html>
+git add assignment39.html
+git commit -m "feat: responsive product grid with header and sidebar using grid - assignment 39"
+git push

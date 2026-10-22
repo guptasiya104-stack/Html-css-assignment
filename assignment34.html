@@ -1,0 +1,126 @@
+34 Build a responsive Navbar + Hero section using Flexbox.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Siya Gupta">
+<title>Assignment 34 - Navbar + Hero with Flexbox - Siya Gupta</title>
+<style>
+*{margin:0; padding:0; box-sizing:border-box;}
+body{font-family:Arial, sans-serif; background:#f8fafc; color:#0f172a;}
+
+/* NAVBAR - FLEXBOX */
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 6%;
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top:0;
+  z-index:10;
+}
+.logo{font-weight:800; font-size:18px;}
+.links{
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+.links a{text-decoration:none; color:#475569; font-size:14px; font-weight:600;}
+.links a:hover{color:#2563eb;}
+.nav-btn{
+  background:#2563eb; color:white; text-decoration:none;
+  padding:8px 16px; border-radius:99px; font-size:13px; font-weight:700;
+}
+
+/* HERO - FLEXBOX */
+.hero{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding: 50px 6%;
+  min-height: 85vh;
+  background: linear-gradient(135deg, #eff6ff, #f8fafc);
+  flex-wrap: wrap; /* responsive */
+}
+.hero-text{
+  flex: 1 1 400px;
+}
+.hero-text h1{font-size:42px; line-height:1.1;}
+.hero-text h1 span{color:#2563eb;}
+.hero-text p{margin-top:12px; color:#64748b; font-size:15px; line-height:1.5;}
+.hero-btns{
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+.btn-primary{background:#2563eb; color:white; padding:11px 20px; border-radius:10px; text-decoration:none; font-weight:700; font-size:14px;}
+.btn-secondary{background:white; border:1px solid #e2e8f0; padding:11px 20px; border-radius:10px; text-decoration:none; color:#0f172a; font-weight:700; font-size:14px;}
+
+.hero-image{
+  flex: 1 1 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-image img{
+  width:100%;
+  max-width:400px;
+  border-radius:16px;
+  box-shadow:0 20px 40px rgba(15,23,42,0.12);
+}
+
+@media(max-width:700px){
+  .navbar .links{display:none;}
+  .hero-text h1{font-size:32px;}
+  .hero{flex-direction:column; text-align:center;}
+  .hero-btns{justify-content:center;}
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+<div class="logo">Siya Gupta</div>
+<ul class="links">
+<li><a href="#">Home</a></li>
+<li><a href="assignment31.html">Menu</a></li>
+<li><a href="assignment32.html">Login</a></li>
+<li><a href="assignment33.html">Products</a></li>
+</ul>
+<a href="registration.html" class="nav-btn">Join Now</a>
+</nav>
+
+<section class="hero">
+<div class="hero-text">
+<p style="font-size:12px; font-weight:700; color:#2563eb; letter-spacing:1px;">ASSIGNMENT 34 | FLEXBOX</p>
+<h1>Build Your Future With <span>BCA & Flexbox</span></h1>
+<p>Complete responsive Navbar + Hero section built only using <b>display:flex, justify-content, align-items, flex-wrap, flex:1</b>. Created by Siya Gupta, BCA 1st Year, Invertis University Bareilly.</p>
+<div class="hero-btns">
+<a href="#" class="btn-primary">Get Started</a>
+<a href="#" class="btn-secondary">View Projects</a>
+</div>
+<p style="font-size:11px; color:#94a3b8; margin-top:15px;">7895673750 | Guptasiya104@gmail.com | Bareilly, UP</p>
+</div>
+
+<div class="hero-image">
+<img src="https://picsum.photos/600/400?random=34" alt="Hero Image - BCA Student">
+</div>
+</section>
+
+<div style="max-width:800px; margin:15px auto; background:white; padding:12px; border:1px solid #e2e8f0; border-radius:10px; font-size:12px; font-family:monospace;">
+.navbar { display:flex; justify-content:space-between; align-items:center; }<br>
+.hero { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; }<br>
+.hero-text, .hero-image { flex:1 1 350px; }<br>
+.hero-btns { display:flex; gap:12px; }
+</div>
+
+</body>
+</html>
+git add assignment34.html
+git commit -m "feat: responsive navbar + hero section using flexbox - assignment 34"
+git push

@@ -1,0 +1,112 @@
+26 Annotate a screenshot explaining the box model of one of your own elements.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Siya Gupta">
+<title>Assignment 26 - Box Model Annotation - Siya Gupta</title>
+<style>
+*{margin:0; padding:0; box-sizing:border-box;}
+body{font-family:Arial, sans-serif; background:#f8fafc; padding:20px; color:#334155;}
+.container{max-width:900px; margin:auto;}
+h1{text-align:center; color:#0f172a; margin-bottom:5px;}
+.sub{text-align:center; font-size:12px; color:#64748b; margin-bottom:20px;}
+.card{background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:20px; margin-bottom:16px;}
+
+ /* --- THE ELEMENT WE ARE EXPLAINING --- */
+ .demo-wrapper{
+   background:#fee2e2; /* Margin area - Reddish */
+   padding:20px;
+   border:2px dashed #ef4444;
+   position:relative;
+ }
+ .demo-wrapper::before{
+   content:"MARGIN (20px) - Space outside border - Transparent/Dashed Red";
+   position:absolute; top:2px; left:10px;
+   font-size:10px; font-weight:700; color:#dc2626;
+ }
+ .box-element{
+   background:#dbeafe; /* Padding area - Blueish */
+   border:10px solid #2563eb; /* Border */
+   padding:25px; /* Padding */
+   color:#0f172a;
+   text-align:center;
+ }
+ .content-area{
+   background:#ffffff;
+   border:2px solid #16a34a;
+   padding:15px;
+ }
+
+ /* Labels */
+ .legend{display:flex; flex-wrap:wrap; gap:10px; margin-top:15px;}
+ .legend span{padding:5px 10px; border-radius:6px; font-size:12px; font-weight:700;}
+ .arrow{font-size:12px; margin-top:8px; background:#f1f5f9; padding:8px; border-radius:6px;}
+</style>
+</head>
+<body>
+
+<div class="container">
+<h1>Box Model Annotation</h1>
+<p class="sub">Assignment 26 | Siya Gupta | BCA 1st Year | Invertis University | Element: .box-element</p>
+
+<div class="card">
+<h2 style="font-size:16px; margin-bottom:10px;">My Own Element - Screenshot Annotation</h2>
+<p style="font-size:13px; margin-bottom:15px;">I inspected my <b>.box-element</b> card from my multi-page project using Chrome DevTools. Below is the visual explanation + annotation.</p>
+
+<!-- Visual Box Model Demo -->
+<div class="demo-wrapper">
+  <div class="box-element">
+    <div class="content-area">
+      <b>CONTENT AREA</b><br>
+      Width: 100% | Height: auto<br>
+      This is actual text/content<br>
+      background: white, border: green
+    </div>
+  </div>
+</div>
+
+<div class="legend">
+<span style="background:#ffffff; border:2px solid #16a34a;">CONTENT - White + Green Border</span>
+<span style="background:#dbeafe; border:1px solid #2563eb;">PADDING (25px) - Light Blue</span>
+<span style="background:#2563eb; color:white;">BORDER (10px solid #2563eb)</span>
+<span style="background:#fee2e2; border:1px dashed #ef4444;">MARGIN (20px) - Light Red + Dashed</span>
+</div>
+
+<div class="arrow">
+<b>1. Content (Innermost):</b> The white box with green border. This is where text, image sits. Size controlled by width/height.<br>
+<b>2. Padding (25px):</b> Light blue area between content and border. It gives breathing space inside. I used padding:25px;<br>
+<b>3. Border (10px solid blue):</b> The thick blue line around padding. It is visible. I used border:10px solid #2563eb;<br>
+<b>4. Margin (20px):</b> Outer light red dashed area. Space OUTSIDE border to push other elements away. I used margin from wrapper 20px.<br>
+<br>
+<b>Total Size Calculation:</b> Total Width = Content Width + Padding (25*2) + Border (10*2) + Margin (20*2)<br>
+If content is 300px, then total = 300 + 50 + 20 + 40 = 410px
+</div>
+</div>
+
+<div class="card">
+<h2 style="font-size:14px;">How I Took Screenshot (For Submission)</h2>
+<ol style="font-size:13px; margin-left:18px; line-height:1.8;">
+<li>Open my page (about.html / assignment20.html) in Chrome</li>
+<li>Right click on my card element -> Inspect</li>
+<li>In Elements tab, select the element</li>
+<li>In Styles pane, see Computed -> Box Model diagram at bottom</li>
+<li>Take screenshot with Snipping Tool - it shows Content / Padding / Border / Margin values</li>
+<li>Paste that screenshot image below (replace src with your screenshot)</li>
+</ol>
+<!-- Replace this with your real screenshot -->
+<div style="margin-top:12px; background:#0f172a; color:#94a3b8; padding:15px; border-radius:8px; text-align:center; font-size:12px;">
+[ Paste your DevTools Box Model Screenshot Here ]<br>
+Example: &lt;img src="my-box-model-screenshot.png" alt="Box Model Screenshot" style="max-width:100%;"&gt;<br>
+You can add: <br>
+&lt;img src="screenshot.png" alt="Annotated box model of .card element by Siya Gupta" style="width:100%; border-radius:8px; margin-top:10px;"&gt;
+</div>
+</div>
+
+<p style="text-align:center; font-size:11px; color:#94a3b8; margin-top:15px;">© 2026 Siya Gupta | Assignment 26 - Box Model Explained | Phone: 7895673750 | Guptasiya104@gmail.com</p>
+</div>
+
+</body>
+</html>
+<img src="screenshot.png" alt="Box model screenshot" style="width:100%; border-radius:8px;">

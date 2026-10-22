@@ -1,0 +1,158 @@
+29 Style a landing-page hero section using position and z-index.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Siya Gupta">
+<title>Assignment 29 - Hero with Position & Z-Index - Siya Gupta</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Inter:wght@400&display=swap" rel="stylesheet">
+<style>
+*{margin:0; padding:0; box-sizing:border-box;}
+body{font-family:'Inter', sans-serif; background:#f8fafc;}
+
+/* HERO SECTION */
+.hero{
+  position: relative; /* parent for absolute children */
+  height: 500px;
+  background: #0f172a;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+}
+
+/* Layer 1: Background Image - z-index 1 */
+.hero-bg{
+  position: absolute;
+  top:0; left:0;
+  width:100%; height:100%;
+  background-image: url('https://picsum.photos/1200/600');
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  opacity: 0.4;
+}
+
+/* Layer 2: Gradient Overlay - z-index 2 */
+.hero-overlay{
+  position: absolute;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: linear-gradient(90deg, #0f172a 10%, transparent 70%);
+  z-index: 2;
+}
+
+/* Layer 3: Decorative Blob - z-index 2 */
+.blob{
+  position: absolute;
+  width: 300px; height: 300px;
+  background: #2563eb;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.5;
+  z-index: 2;
+}
+.blob-1{bottom:-80px; right:10%;}
+.blob-2{top:-60px; right:30%; background:#7c3aed;}
+
+/* Layer 4: Content - z-index 3 (on top) */
+.hero-content{
+  position: relative;
+  z-index: 3;
+  max-width: 500px;
+  color: white;
+}
+.hero-content h1{
+  font-family:'Poppins', sans-serif;
+  font-size:42px;
+  line-height:1.1;
+  margin-bottom:12px;
+}
+.hero-content p{color:#cbd5e1; margin-bottom:18px; font-size:15px;}
+.btn{
+  display:inline-block;
+  background:#2563eb;
+  color:white;
+  padding:12px 22px;
+  border-radius:99px;
+  text-decoration:none;
+  font-weight:700;
+  font-family:'Poppins', sans-serif;
+}
+.btn-outline{
+  background:transparent;
+  border:1px solid rgba(255,255,255,0.3);
+  margin-left:8px;
+}
+
+/* Layer 5: Floating Badge - z-index 4 (highest) */
+.floating-badge{
+  position: absolute;
+  z-index: 4;
+  background: white;
+  color: #0f172a;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  top: 25%;
+  right: 12%;
+  animation: float 3s ease-in-out infinite;
+}
+@keyframes float{0%,100%{transform:translateY(0);} 50%{transform:translateY(-10px);}}
+
+nav{position:absolute; top:0; left:0; width:100%; z-index:5; display:flex; justify-content:space-between; padding:15px 8%; color:white; font-size:13px;}
+nav a{color:#93c5fd; text-decoration:none; margin-left:12px;}
+
+.info{max-width:800px; margin:20px auto; background:white; border:1px solid #e2e8f0; border-radius:12px; padding:15px; font-size:12px;}
+</style>
+</head>
+<body>
+
+<nav>
+<b style="font-family:Poppins;">Siya Gupta</b>
+<div><a href="#">Home</a> <a href="#">About</a> <a href="#">Contact</a></div>
+</nav>
+
+<section class="hero">
+  <!-- z-index 1 -->
+  <div class="hero-bg"></div>
+  <!-- z-index 2 -->
+  <div class="hero-overlay"></div>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <!-- z-index 4 -->
+  <div class="floating-badge">⭐ BCA Project - 2026</div>
+  <!-- z-index 3 -->
+  <div class="hero-content">
+    <p style="color:#60a5fa; font-weight:700; font-size:12px; letter-spacing:1px;">ASSIGNMENT 29</p>
+    <h1>Build Your Future With BCA</h1>
+    <p>Styled landing-page hero section using position: relative, absolute and z-index. Layered design by Siya Gupta, Invertis University.</p>
+    <a href="#" class="btn">Get Started</a>
+    <a href="#" class="btn btn-outline">Learn More</a>
+  </div>
+</section>
+
+<div class="info">
+<h3 style="font-size:14px; margin-bottom:8px;">Position & Z-Index Explanation (Teacher ke liye):</h3>
+<p style="background:#f8fafc; padding:10px; border-radius:8px; font-family:monospace; line-height:1.6;">
+.hero { position: relative; } /* parent context */<br>
+.hero-bg { position: absolute; top:0; left:0; width:100%; height:100%; z-index:1; } /* background layer */<br>
+.hero-overlay { position: absolute; z-index:2; } /* gradient over image */<br>
+.blob { position: absolute; z-index:2; } /* decorative */<br>
+.hero-content { position: relative; z-index:3; } /* text on top of overlay */<br>
+.floating-badge { position: absolute; z-index:4; } /* highest, floating */<br>
+nav { position: absolute; z-index:5; } /* nav always top */
+</p>
+<p style="margin-top:8px;"><b>Why use z-index?</b> Without z-index, all layers would be random. With z-index, we control stacking: 1=bg image, 2=overlay/blobs, 3=content, 4=badge, 5=nav.</p>
+</div>
+
+<p style="text-align:center; font-size:11px; color:#94a3b8; margin:20px;">© 2026 Siya Gupta | Assignment 29 - Hero Section with Position & Z-Index | 7895673750</p>
+
+</body>
+</html>
+git add assignment29.html
+git commit -m "feat: style landing-page hero section using position and z-index - assignment 29"
+git push

@@ -1,0 +1,83 @@
+Create a portfolio page with working internal
+ navigation.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siya Gupta - Portfolio</title>
+<style>
+  *{margin:0; padding:0; box-sizing:border-box; font-family:Arial, sans-serif; scroll-behavior:smooth}
+  body{background:#f8fafc; color:#1e293b}
+  nav{position:sticky; top:0; background:#0f172a; padding:15px 20px; display:flex; justify-content:space-between; align-items:center; z-index:10}
+  nav h1{color:#fff; font-size:18px}
+  nav a{color:#94a3b8; text-decoration:none; margin-left:15px; font-size:14px; font-weight:600}
+  nav a:hover{color:#fff}
+  .container{max-width:800px; margin:0 auto; padding:20px}
+  header{padding:40px 0; text-align:center}
+  header h2{font-size:32px} header p{color:#64748b; margin-top:8px}
+  section{background:#fff; padding:25px; border-radius:12px; margin-top:20px; box-shadow:0 2px 10px rgba(0,0,0,0.05)}
+  section h3{border-bottom:2px solid #e2e8f0; padding-bottom:8px; margin-bottom:12px; color:#0f172a}
+  .tag{background:#eff6ff; border:1px solid #dbeafe; padding:6px 12px; border-radius:20px; display:inline-block; margin:4px; font-size:13px}
+  footer{text-align:center; padding:20px; color:#94a3b8; font-size:13px; margin-top:20px}
+</style>
+</head>
+<body>
+
+<nav>
+  <h1>SIYA GUPTA</h1>
+  <div>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<div class="container">
+  <header>
+    <h2>Hi, I'm Siya Gupta from Aligarh</h2>
+    <p>BCA 1st Year - Invertis University | HTML | CSS | Java | 7895673750</p>
+  </header>
+
+  <section id="about">
+    <h3>About Me</h3>
+    <p>I am Siya Gupta from Aligarh. I am pursuing BCA 1st Year from Invertis University. I am passionate about Web Development and want to become a Frontend Developer. This portfolio is made for Assignment 11.</p>
+  </section>
+
+  <section id="skills">
+    <h3>Skills</h3>
+    <span class="tag">HTML5</span>
+    <span class="tag">CSS3</span>
+    <span class="tag">Java</span>
+    <span class="tag">Git & GitHub</span>
+    <span class="tag">Semantic HTML</span>
+  </section>
+
+  <section id="projects">
+    <h3>Projects</h3>
+    <ul>
+      <li><b>Personal Resume Page</b> - Made using semantic tags (Assignment 8)</li>
+      <li><b>Debugged Page</b> - Fixed 12 HTML bugs (Assignment 9)</li>
+      <li><b>Personal Introduction Page</b> - Full intro page (Assignment 10)</li>
+    </ul>
+  </section>
+
+  <section id="education">
+    <h3>Education</h3>
+    <p><b>BCA 1st Year</b> - Invertis University, Aligarh - 2025-Present<br>
+    <b>Email:</b> Guptasiya104@gmail.com | <b>Phone:</b> 7895673750</p>
+  </section>
+
+  <section id="contact">
+    <h3>Contact Me</h3>
+    <p>Want to connect? Email me at <b>Guptasiya104@gmail.com</b> or call at <b>7895673750</b>.</p>
+    <p><a href="#about">Back to Top ↑</a></p>
+  </section>
+
+  <footer>© 2026 Siya Gupta - Assignment 11 Portfolio with Internal Navigation</footer>
+</div>
+
+</body>
+</html>
